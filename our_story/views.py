@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, reverse
 from django.http import HttpResponse
 
 # Create your views here.
 def our_story(request):
-    return HttpResponse("Our Story")
+    return render(request, 'our_story/our-story.html',)
