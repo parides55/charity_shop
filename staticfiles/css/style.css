@@ -1,3 +1,47 @@
 body {
-    background-color: lightgreen;
+    min-height: 100vh;
+    max-width: 100vw;
+}
+
+/* ------------------------------NavBar----------------------------- */
+li {
+    list-style: none;
+}
+
+.navbar {
+    border-bottom: 1px solid gray;
+}
+
+/* ------------------------------Products----------------------------- */
+#view-basket {
+    font-size: 1.7rem;
+    margin-right: 10px;
+}
+
+#products-heading {
+    text-align: center;
+}
+
+#add-to-basket {
+    text-align: right;
+}
+
+/* ------------------------------Events----------------------------- */
+.event-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 15px 30px;
+}
+
+.event-image-div{
+    width: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ------------------------------Footer----------------------------- */
+footer {
+    width: 100vw;
+    border-top: 1px solid gray;
 }
