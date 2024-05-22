@@ -7,3 +7,6 @@ def home(request):
 
 def products(request):
     return render(request, 'products/products.html',)
+
+def basket(request):
+    return render(request, 'products/basket.html',)
