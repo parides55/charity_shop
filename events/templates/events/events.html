@@ -2,9 +2,28 @@
 
 {% block content %}
 
+{% load static %}
+
 <div class="container-fluid">
     <div class="row">
-        <h1>EVENTS</h1>
+        {% for event in event_list %}
+        <div class="card event-container">
+            <div class="card-header event-image-div">
+                {% if "placeholder" in event.event_image.url %}
+                <img class="card-img-top img-thumbnail" src="{% static 'images/default.jpg' %}"
+                    alt="placeholder image">
+                {% else %}
+                <img class="card-img-top img-thumbnail" src=" {{ event.event_image.url }}"
+                    alt="{{ event.title }}">
+                {% endif %}
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{event.title}}</h5>
+                <p class="card-text">{{event.excerpt | safe}}</p>
+                <a href="#" class="card-link">View Event</a>
+            </div>
+        </div>
+        {% endfor %}
     </div>
 </div>
 

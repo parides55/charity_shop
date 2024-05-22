@@ -9,6 +9,7 @@ class EventAdmin(SummernoteModelAdmin):
     list_filter = ('status', 'created_on')
     list_display = ('title', 'author', 'created_on', 'status')
     search_fields = ('title', 'content')
+    prepopulated_fields = {'slug': ('title',)}
 
 @admin.register(Review)
 class ReviewAdmin(admin.ModelAdmin):
