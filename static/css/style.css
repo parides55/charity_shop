@@ -1,7 +1,31 @@
 body {
-    background-color: lightgreen;
+    height: 100vh;
 }
 
-main {
-    height: 100vh;
+li {
+    list-style: none;
+}
+
+.navbar {
+    border-bottom: 1px solid gray;
+}
+
+#view-basket {
+    font-size: 1.7rem;
+    margin-right: 10px;
+}
+
+#products-heading {
+    text-align: center;
+}
+
+#add-to-basket {
+    text-align: right;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    border-top: 1px solid gray;
 }

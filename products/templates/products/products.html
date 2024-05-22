@@ -2,12 +2,56 @@
 
 {% block content %}
 
+{% load static %}
+
 <div class="container-fluid">
-    <div class="row">
+    <div class="row" id="products-heading">
         <h1>Products</h1>
-        <a href="{% url 'basket' %}">Basket</a>
+    </div>
+    <div class="row">
+        <div class="col-12 mt-3 left">
+            <div class="row">
+                {% for product in product_list %}
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="image-container">
+                                {% if "placeholder" in product.product_image.url %}
+                                <img class="card-img-top" src="{% static 'images/default.jpg' %}"
+                                    alt="placeholder image">
+                                {% else %}
+                                <img class="card-img-top" src=" {{ product.product_image.url }}"
+                                    alt="{{ product.title }}">
+                                {% endif %}
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">{{product.title}}</h5>
+                                <p class="card-text">{{product.description | safe}}</p>
+                            </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">{{product.condition}}</li>
+                                    <li class="list-group-item"><i class="fa-solid fa-euro-sign"></i> {{product.price}}</li>
+                                </ul>
+                            <div class="card-body" id="add-to-basket">
+                                <a href="#" class="card-link"><i class="fa-solid fa-basket-shopping"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 </div>
 
-
 {% endblock %}
+
+
+
+
+
+<!--{% if "placeholder" in product.product_image.url %}
+        <img class="scale" src="{% static 'images/default.jpg' %}" alt="placeholder image">
+        {% else %}
+        <img class="scale" src=" {{ product.product_image.url }}" alt="{{ product.title }}">
+        {% endif %}-->
