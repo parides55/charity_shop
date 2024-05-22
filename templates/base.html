@@ -58,14 +58,20 @@
               <ul class="navbar-nav">
               {% if user.is_authenticated %}
                     <li class="nav-item">
-                      <a href="{% url 'basket' %}"><i class="fa-solid fa-basket-shopping view-basket"></i></a>
+                      <a href="{% url 'basket' %}">
+                        <i class="fa-solid fa-basket-shopping navbar-icons"></i>
+                      </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}" href="{% url 'account_logout' %}">Logout</a>
+                      <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}" href="{% url 'account_logout' %}">
+                        <i class="fa-solid fa-right-from-bracket navbar-icons"></i>
+                      </a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == login_url %}active" aria-current="page{% endif %}" href="{% url 'account_login' %}">Login</a>
+                        <a class="nav-link {% if request.path == login_url %}active" aria-current="page{% endif %}" href="{% url 'account_login' %}">
+                          <i class="fa-solid fa-right-to-bracket navbar-icons"></i>
+                        </a>
                     </li>
                     {% endif %}
               </ul>

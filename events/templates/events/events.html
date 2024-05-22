@@ -20,7 +20,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{event.title}}</h5>
                 <p class="card-text">{{event.excerpt | safe}}</p>
-                <a href="#" class="card-link">View Event</a>
+                <a href="{% url 'event_info' event.slug %}" class="card-link">View Event</a>
             </div>
         </div>
         {% endfor %}
