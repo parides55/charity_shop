@@ -2,9 +2,24 @@
 
 {% block content %}
 
+{% load static %}
+
 <div class="container-fluid">
     <div class="row">
-        <h1>OUR STORY</h1>
+        {% for ourstory in ourstory_list %}
+        <div class="col">
+            {% if "placeholder" in ourstory.profile_image.url %}
+            <img class="card-img-top img-thumbnail" src="{% static 'images/default.jpg' %}"
+                alt="placeholder image">
+            {% else %}
+            <img class="card-img-top img-thumbnail" src=" {{ ourstory.profile_image.url }}"
+                alt="{{ ourstory.title }}">
+            {% endif %}
+        </div>
+        <div class="col">
+            <article>{{ourstory.content | safe}}</article>
+        </div>
+        {% endfor %}
     </div>
 </div>
 
