@@ -58,7 +58,7 @@
               <ul class="navbar-nav">
               {% if user.is_authenticated %}
                     <li class="nav-item">
-                      <a href="{% url 'basket' %}"><i id="view-basket" class="fa-solid fa-basket-shopping"></i></a>
+                      <a href="{% url 'basket' %}"><i class="fa-solid fa-basket-shopping view-basket"></i></a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}" href="{% url 'account_logout' %}">Logout</a>

@@ -13,9 +13,10 @@ li {
 }
 
 /* ------------------------------Products----------------------------- */
-#view-basket {
+.view-basket {
     font-size: 1.7rem;
     margin-right: 10px;
+    color: gray;
 }
 
 #products-heading {

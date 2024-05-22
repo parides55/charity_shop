@@ -6,20 +6,18 @@
 
 <div class="container-fluid">
     <div class="row">
-        {% for ourstory in ourstory_list %}
         <div class="col">
-            {% if "placeholder" in ourstory.profile_image.url %}
+            {% if "placeholder" in our_story.profile_image.url %}
             <img class="card-img-top img-thumbnail" src="{% static 'images/default.jpg' %}"
                 alt="placeholder image">
             {% else %}
-            <img class="card-img-top img-thumbnail" src=" {{ ourstory.profile_image.url }}"
-                alt="{{ ourstory.title }}">
+            <img class="card-img-top img-thumbnail" src=" {{ our_story.profile_image.url }}"
+                alt="{{ our_story.title }}">
             {% endif %}
         </div>
         <div class="col">
-            <article>{{ourstory.content | safe}}</article>
+            <article>{{our_story.content | safe}}</article>
         </div>
-        {% endfor %}
     </div>
 </div>
 
