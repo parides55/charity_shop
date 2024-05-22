@@ -6,6 +6,7 @@ from .forms import ContactUsForm
 
 # Create your views here.
 def our_story(request):
+
     queryset = OurStory.objects.all()
     our_story = get_object_or_404(queryset)
     return render(

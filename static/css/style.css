@@ -33,6 +33,7 @@ li {
     flex-direction: row;
     align-items: center;
     margin: 15px 30px;
+    width: -webkit-fill-available;
 }
 
 .event-image-div{
