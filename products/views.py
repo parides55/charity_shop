@@ -44,4 +44,14 @@ def home(request):
     return render(request, 'products/index.html',)
 
 def basket(request):
-    return render(request, 'products/basket.html',)
+
+    items = []
+    amounts = []
+    for item in Basket.objects.filter(user=request.user).all():
+        items.append(item)
+        amounts.append(item.amount)
+    total = sum(amounts)
+    print(total)
+    
+
+    return render(request, 'products/basket.html', {'items': items, 'total': total,},)
