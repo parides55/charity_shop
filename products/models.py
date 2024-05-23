@@ -33,9 +33,9 @@ class Basket(models.Model):
     """
     Stores a single basket entry related to :model:`auth.User` and :model:`products.Product`.
     """
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='basket')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='buyer')
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='product')
-    amount = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='amount')
+    amount = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='pricing')
     quantity = models.IntegerField(default=1)
     created_on = models.DateTimeField(auto_now_add=True)
 

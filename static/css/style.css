@@ -27,9 +27,12 @@ li {
     text-align: right;
 }
 
-.basket-btn {
-    border: none;
-    background-color: transparent;
+.view-basket {
+    text-decoration: none;
+}
+
+.view-basket:hover {
+    font-size: larger;
 }
 
 /* ------------------------------Events----------------------------- */
