@@ -16,20 +16,17 @@ def view_product(request, slug):
 
     queryset = Product.objects.all()
     product = get_object_or_404(queryset, slug=slug)
-    print(product)
     basket = product.product.all()
-    print(basket)
     
     if request.method == 'POST':
-        basket_form = BasketForm(request.POST)
-        print(basket_form)
+        basket_form = BasketForm(data=request.POST)
         if basket_form.is_valid():
-            order = basket_form.save()
+            order = basket_form.save(commit=False)
+            order.user = request.user
             order.product = product
             order.amount = product.price
             order.quantity = 1
             order.save()
-            print(order)
             messages.success(request, 'Product added to basket')
         else:
             messages.error(request, 'Error adding product to basket')

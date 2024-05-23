@@ -23,6 +23,7 @@
             <form id=basket_form method='post'>
                 {{ basket_form | crispy }}
                 {% csrf_token %}
+                <input type="number" name="quantity" aria-invalid="true" id="id_quantity" value="1">
                 <button type="submit" class="btn btn-primary">Add to Basket</button>
             </form>
             {% else %}

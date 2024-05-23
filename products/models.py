@@ -35,7 +35,7 @@ class Basket(models.Model):
     """
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='buyer')
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='product')
-    amount = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='pricing')
+    amount = models.DecimalField(max_digits=10, decimal_places=2)
     quantity = models.IntegerField(default=1)
     created_on = models.DateTimeField(auto_now_add=True)
 
