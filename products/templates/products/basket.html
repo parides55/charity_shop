@@ -2,11 +2,55 @@
 
 {% block content %}
 
+<!-- Basket Overview Section -->
+<h1>Your Basket</h1>
+
 <div class="container-fluid">
     <div class="row">
-        <h1>Basket</h1>
+        <div class="col-lg-6 col-md-12">
+            <!-- Product List -->
+            <div class="row border-bottom py-2">
+                <div class="col-md-2">
+                    <img src="https://via.placeholder.com/100" alt="Product Image" class="img-fluid">
+                </div>
+                <div class="col-md-3">
+                    <a href="#">Product Name</a>
+                    <p>Size: M, Color: Red</p>
+                </div>
+                <div class="col-md-2">
+                    <input type="number" class="form-control" value="1" min="1">
+                </div>
+                <div class="col-md-2">
+                    <p>$20.00</p>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-danger">Remove</button>
+                </div>
+            </div>
+            <!-- Repeat product rows as necessary -->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-12">
+            <!-- Summary Section -->
+            <div class="row mt-4">
+                <div class="col-md-6 offset-md-6">
+                    <h4>Order Summary</h4>
+                    <p>Subtotal: $40.00</p>
+                    <p>Shipping costs: <span id="shipping-estimate">free</span></p>
+                    <h4>Total: $49.00</h4>
+                    <button class="btn btn-success btn-lg w-100">Proceed to Checkout</button>
+                    <button class="btn btn-secondary btn-lg w-100 mt-2">Continue Shopping</button>
+                </div>
+            </div>
+            </div>
+        </div>
     </div>
 </div>
+
+
+
+
 
 
 {% endblock %}

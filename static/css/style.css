@@ -23,8 +23,13 @@ li {
     text-align: center;
 }
 
-#add-to-basket {
+.add-to-basket-div {
     text-align: right;
+}
+
+.basket-btn {
+    border: none;
+    background-color: transparent;
 }
 
 /* ------------------------------Events----------------------------- */
@@ -46,4 +51,5 @@ li {
 footer {
     width: 100vw;
     border-top: 1px solid gray;
+    margin-top: 20px;
 }
