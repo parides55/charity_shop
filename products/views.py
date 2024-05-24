@@ -1,8 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.contrib import messages
 from django.views import generic
-from django.views.generic import FormView
-from django.http import HttpResponse
+from django.http import HttpResponseRedirect 
 from .models import Product, Basket
 from .forms import BasketForm
 
@@ -45,16 +44,18 @@ def home(request):
 
 def basket(request):
 
-    items = []
-    amounts = []
-    for item in Basket.objects.filter(user=request.user).all():
-        items.append(item)
-        amounts.append(item.amount)
-    total = sum(amounts)
+    items = Basket.objects.filter(user=request.user)
+    total = sum(item.amount for item in items)
 
-    images = []
-    for item in Product.objects.filter(product__in=items).all():
-        images.append(item.product_image)
+    return render(request, 'products/basket.html', {'items': items, 'total': total})
 
 
-    return render(request, 'products/basket.html', {'items': items, 'total': total, 'images': images,},)
+def remove_item(request, basket_id):
+
+    basket_item = get_object_or_404(Basket, id=basket_id, user=request.user)
+    print(basket_id)
+    basket_item.delete()
+    print("item deleted")
+    messages.add_message(request, messages.SUCCESS, 'Item removed!')
+
+    return HttpResponseRedirect(reverse('basket'))
