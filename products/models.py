@@ -23,7 +23,7 @@ class Product(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f"Product: {self.title} | added by {self.author}"
+        return f"Product: {self.title} "
 
     class Meta:
         ordering = ['-created_on', 'author']

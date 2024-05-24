@@ -37,7 +37,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav mx-auto p-2">
                 <li class="nav-item">
                     <a class="nav-link {% if request.path == home_url %}active" aria-current="page{% endif %}" href="{% url 'home' %}">HOME</a>
                   </li>
@@ -55,7 +55,7 @@
               </li>
             </ul>
             <span class="navbar-text">
-              <ul class="navbar-nav">
+              <ul class="navbar-nav user-icons">
               {% if user.is_authenticated %}
                     <li class="nav-item">
                       <a href="{% url 'basket' %}">

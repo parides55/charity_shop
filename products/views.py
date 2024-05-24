@@ -51,7 +51,10 @@ def basket(request):
         items.append(item)
         amounts.append(item.amount)
     total = sum(amounts)
-    print(total)
-    
 
-    return render(request, 'products/basket.html', {'items': items, 'total': total,},)
+    images = []
+    for item in Product.objects.filter(product__in=items).all():
+        images.append(item.product_image)
+
+
+    return render(request, 'products/basket.html', {'items': items, 'total': total, 'images': images,},)
