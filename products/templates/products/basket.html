@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-lg-6 col-md-12">
             <div class="row border-bottom py-2">
-                {% for order in items %}
+                {% for item in items %}
                 <div class="col-md-2">
                     {% if "placeholder" in image.product_image.url %}
                     <img src="{% static 'images/default.jpg' %}" alt="Product Image" class="img-fluid">
@@ -19,31 +19,31 @@
                     {% endif %}
                 </div>
                 <div class="col-md-3">
-                    <p>{{order.product}}</p>
-                    <p>Username: {{order.user}}</p>
+                    <p>{{item.product}}</p>
+                    <p>Username: {{item.user}}</p>
                 </div>
                 <div class="col-md-2">
                     <input type="number" class="form-control" value="1" min="1">
                 </div>
                 <div class="col-md-2">
-                    <p>{{order.amount}}</p>
+                    <p>{{item.amount}}</p>
                 </div>
                 <div class="col-md-2">
-                    <button class="btn btn-danger">Remove</button>
+                    <button class="btn btn-danger btn-to-remove-item" data-basket_id="{{ basket.id }}">Remove</button>
                 </div>
             </div>
             {% endfor %}
-            <!-- Repeat product rows as necessary -->
         </div>
     </div>
+
+    <!-- Summary Section -->
     <div class="row">
         <div class="col-lg-6 col-md-12">
-            <!-- Summary Section -->
             <div class="row mt-4">
                 <div class="col-md-6 offset-md-6">
                     <h4>Order Summary</h4>
                     <p>Shipping costs: <span id="shipping-estimate">free</span></p>
-                    <h4>Total: {{total}}</h4>
+                    <h4>Total:<i class="fa-solid fa-euro-sign"></i> {{total}}</h4>
                     <button class="btn btn-success btn-lg w-100">Proceed to Checkout</button>
                     <button class="btn btn-secondary btn-lg w-100 mt-2">Continue Shopping</button>
                 </div>
@@ -53,9 +53,23 @@
     </div>
 </div>
 
-
-
-
-
+<div class="modal fade" id="removalModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{item.product}}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>{{item.user}}, please confirm you want to remove the above item. </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="removeConfirm">Remove</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
+

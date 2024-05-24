@@ -23,10 +23,10 @@
                     <div class="card-body">
                         <h5 class="card-title">{{product.title}}</h5>
                         <p class="card-text"><i class="fa-solid fa-euro-sign"></i> {{product.price}}</p>
-                        <a href="{% url 'view-product' product.slug %}" class="btn btn-primary view-basket">View</a>
+                        <a href="{% url 'view-product' product.slug %}" class="btn btn-primary view-info">View</a>
                     </div>
                 </div>
-                {% if forloop.counter|divisibleby:3 %}
+                {% if forloop.counter|divisibleby:4 %}
             </div>
             <div class="row">
                 {% endif %}

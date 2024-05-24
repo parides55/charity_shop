@@ -18,7 +18,8 @@
         </div>
     <div class="row">
         <div class="col-lg-6 col-md-12">
-        {{product.description | safe}}
+        <p>{{product.description | safe}}</p>
+        <p><i class="fa-solid fa-euro-sign"></i> {{ product.price }}</p>
         {% if user.is_authenticated %}
             <form id=basket_form method='post'>
                 {{ basket_form | crispy }}
