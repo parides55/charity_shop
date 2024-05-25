@@ -42,7 +42,12 @@
         {% for review in reviews %}
         <div class="posted-comments mt-4">
             <div class="comment">
-                <p><strong>{{review.author}}</strong> published: {{review.body}}</p>
+                <p><i class="fa-regular fa-comment"></i> from <strong>{{review.author}}</strong>: {{review.body}}</p>
+                {% if user.is_authenticated and review.author == request.user %}
+                <span><button class="btn btn-light" data-review_id="{{ review.review_id }}">Edit</button></span>
+                <span><button class="btn btn-light" data-review_id="{{ review.review_id }}">Delete</button></span>
+                {% endif %}
+                <hr>
             </div>
         {% endfor %}
     </div>
