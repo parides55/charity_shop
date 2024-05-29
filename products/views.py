@@ -53,9 +53,7 @@ def basket(request):
 def remove_item(request, basket_id):
 
     basket_item = get_object_or_404(Basket, id=basket_id, user=request.user)
-    print(basket_id)
     basket_item.delete()
-    print("item deleted")
     messages.add_message(request, messages.SUCCESS, 'Item removed!')
 
     return HttpResponseRedirect(reverse('basket'))

@@ -43,11 +43,12 @@
     </div>
 </div>
 
-<div class="modal fade" id="removalModal" tabindex="-1">
+{% for item in items %}
+<div class="modal fade" id="removalModal" tabindex="-1" aria-labelledby="removalModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">{{item.product.title}}</h5>
+                <h5 class="modal-title">{{item.product_title}}</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -60,9 +61,10 @@
         </div>
     </div>
 </div>
+{% endfor %}
 
 {% endblock content %}
 
 {% block forJS %}
-<script src="{% static 'js/script.js' %}"></script>
+<script src="{% static 'js/basket.js' %}"></script>
 {% endblock %}

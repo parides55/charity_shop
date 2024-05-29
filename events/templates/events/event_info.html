@@ -28,13 +28,9 @@
         <a href="#"><img src="https://via.placeholder.com/50" alt="Related Article Thumbnail"> Related Article Title</a>
     </div>
     <div class="comments-section mt-4 p-4 bg-light">
-        <h3>Comments</h3>
+        <h3>Reviews</h3>
         {% if user.is_authenticated %}
-        <form id="reviewForm" method="post">
-            {{ review_form | crispy }}
-            {% csrf_token %}
-            <button id="submitButton" type="submit"
-            class="btn btn-secondary">Publish</button>
+        <a href="#" id="write-review">Leave Review</a>
         </form>
         {% else %}
         <p>Please <a href="{% url 'account_login' %}">login</a> to leave a review.</p>
@@ -42,10 +38,13 @@
         {% for review in reviews %}
         <div class="posted-comments mt-4">
             <div class="comment">
-                <p><i class="fa-regular fa-comment"></i> from <strong>{{review.author}}</strong>: {{review.body}}</p>
+                <span>
+                    <p><i class="fa-regular fa-comment"></i> from <strong>{{review.author}}</strong>:</p> 
+                    <p id="review{{review.id}}">{{review.body | safe}}</p>
+                </span>
                 {% if user.is_authenticated and review.author == request.user %}
-                <span><button class="btn btn-light" data-review_id="{{ review.review_id }}">Edit</button></span>
-                <span><button class="btn btn-light" data-review_id="{{ review.review_id }}">Delete</button></span>
+                <span><button class="btn btn-light edit-comment-button" data-review_id="{{ review.id }}">Edit</button></span>
+                <span><button class="btn btn-light delete-comment-button" data-review_id="{{ review.id }}">Delete</button></span>
                 {% endif %}
                 <hr>
             </div>
@@ -53,9 +52,52 @@
     </div>
 </div>
 
+<!--Edit Modal -->
+<div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Review</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="reviewForm" method="post">
+                    {{ review_form | crispy }}
+                    {% csrf_token %}
+                    <textarea id="id_body" name="body" class="textarea form-control" rows="5" required></textarea>
+                    <button id="submitButton" type="submit"
+                    class="btn btn-secondary">Publish</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                {% comment %} <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="#" id="editConfirm" class="btn btn-primary">Save changes</a> {% endcomment %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Delete Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Attention!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Please confirm you want to delete your comment. </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="#" class="btn btn-primary" id="deleteConfirm">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
 
 {% block forJS %}
-<script src="{% static 'js/script.js' %}"></script>
+<script src="{% static 'js/reviews.js' %}"></script>
 {% endblock %}
