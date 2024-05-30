@@ -9,6 +9,19 @@ body {
     flex-direction: column;
 }
 
+.home-div {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .view-info {
     display: block;
     background-color: transparent;
@@ -33,6 +46,8 @@ li {
 .user-icons {
     display: flex;
     align-items: center;
+    flex-direction: row;
+    justify-content: center;
 }
 
 /* ------------------------------Products----------------------------- */

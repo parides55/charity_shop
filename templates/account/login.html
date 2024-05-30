@@ -9,33 +9,31 @@
 
 {% block content %}
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col postion-relative">
-            <div class="position-absolute top-50 start-50 translate-middle">
-                {% element h1 %}
-                    {% trans "Sign In" %}
-                {% endelement %}
+<div class="container-fluid home-div">
+    <div class="row home-row">
+        <div class="col-lg-6 col-md-12">
+            {% element h1 %}
+                {% trans "Sign In" %}
+            {% endelement %}
 
-                {% blocktranslate %}
-                    If you have not created an account yet, then please<a href="{{ signup_url }}"> sign up</a> first.
-                {% endblocktranslate %}
+            {% blocktranslate %}
+                If you have not created an account yet, then please<a href="{{ signup_url }}"> sign up</a> first.
+            {% endblocktranslate %}
 
-                {% url 'account_login' as login_url %}
-                {% element form form=form method="post" action=login_url tags="entrance,login" %}
-                    {% slot body %}
-                        {% csrf_token %}
-                        {% element fields form=form unlabeled=True %}
-                        {% endelement %}
-                        {{ redirect_field }}
-                    {% endslot %}
-                    {% slot actions %}
-                        {% element button type="submit" tags="prominent,login" %}
-                            {% trans "Sign In" %}
-                        {% endelement %}
-                    {% endslot %}
-                {% endelement %}
-            </div>
+            {% url 'account_login' as login_url %}
+            {% element form form=form method="post" action=login_url tags="entrance,login" %}
+                {% slot body %}
+                    {% csrf_token %}
+                    {% element fields form=form unlabeled=True %}
+                    {% endelement %}
+                    {{ redirect_field }}
+                {% endslot %}
+                {% slot actions %}
+                    {% element button type="submit" tags="prominent,login" %}
+                        {% trans "Sign In" %}
+                    {% endelement %}
+                {% endslot %}
+            {% endelement %}
         </div>
     </div>
 </div>
