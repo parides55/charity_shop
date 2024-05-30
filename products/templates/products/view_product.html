@@ -6,8 +6,8 @@
 {% load crispy_forms_tags %}
 
 <div class="container text-center">
-    <div class="row">
-        <div class="col-lg-6 col-md-12">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-12 my-5 px-4">
             {% if "placeholder" in product.product_image.url %}
             <img class="card-img-top img-thumbnail" src="{% static 'images/default.jpg' %}"
                 alt="placeholder image">
@@ -16,8 +16,7 @@
                 alt="{{ product.title }}">
             {% endif %}
         </div>
-    <div class="row">
-        <div class="col-lg-6 col-md-12">
+        <div class="col-lg-6 col-md-12 my-5 px-4">
         <p>{{product.description | safe}}</p>
         <p><i class="fa-solid fa-euro-sign"></i> {{ product.price }}</p>
         {% if user.is_authenticated %}
@@ -32,7 +31,6 @@
             {% endif %}
         </div>
     </div>
-    
 </div>
 
 {% endblock %}

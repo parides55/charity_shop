@@ -4,9 +4,9 @@
 
 {% load static %}
 
-<div class="container-fluid">
+<div class="container-fluid my-5 px-5">
     <div class="row">
-        <div class="col-lg-6 col-md-12">
+        <div class="col-lg-5 col-md-12 my-md-4 px-3">
             {% if "placeholder" in our_story.profile_image.url %}
             <img class="card-img-top img-thumbnail" src="{% static 'images/default.jpg' %}"
                 alt="placeholder image">
@@ -15,7 +15,7 @@
                 alt="{{ our_story.title }}">
             {% endif %}
         </div>
-        <div class="col-lg-6 col-md-12">
+        <div class="col-lg-7 col-md-12 my-md-4 px-3">
             <article>{{our_story.content | safe}}</article>
         </div>
     </div>

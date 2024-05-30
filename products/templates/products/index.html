@@ -7,8 +7,12 @@
 <div class="container-fluid home-div">
     <div class="row home-row text-center">
         <div class="col-lg-6 col-md-12">
-            <h1>Welcome to <strong>Charity Treasures!</strong></h1>
-            <h3>Discover, Donate, and Delight in making a positive impact today!</h3>
+            <h1>Charity Treasures</h1>
+            <img src="{% static 'images/icononly_transparent_nobuffer.png' %}" width="150" height="150" alt="Charity Treasures Logo">
+            <h2>
+                Every Purchase, A Heartbeat of Hope!
+            </h2>
+            <h3><a class="text-light" href="{% url 'account_signup' %}">Sign up</a> and donate today to help <a class="text-light" href="{% url 'our_story' %}">our cause</a></h3>
         </div>
     </div>
 </div>
