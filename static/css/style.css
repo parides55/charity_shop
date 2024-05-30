@@ -3,7 +3,6 @@ body {
     color: #3F4A3C;
     min-height: 100vh;
     max-width: 100vw;
-    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -31,18 +30,19 @@ body {
     border-color: gray;
 }
 
-#user-name-div {
-    margin-right: 10px;
-    margin-top: 10px;
+/* ------------------------------NavBar----------------------------- */
+#title-div {
+    width: auto;
 }
 
-/* ------------------------------NavBar----------------------------- */
 li {
     list-style: none;
 }
 
 #navbar-in-nav {
-    border-bottom: 1px solid #3F4A3C;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid gray;
 }
 
 .user-icons {
@@ -55,26 +55,32 @@ li {
 .navbar-icons {
     font-size: 1.7rem;
     margin-right: 10px;
-    color: gray;
+    color: #3F4A3C;
 }
 
 /* ------------------------------Products----------------------------- */
-#products-heading {
-    text-align: center;
+/* Float Shadow */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
 }
 
-.add-to-basket-div {
-    text-align: right;
-}
-
-.view-basket:hover {
-    font-size: larger;
+.card:hover {
+    box-shadow: 0 28px 36px 0 rgba(0, 0, 0, 0.2);
 }
 
 .card-body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    color: #3F4A3C;
+}
+
+.btn:hover {
+    background-color: #3F4A3C;
+    color: white;
 }
 
 /* ------------------------------Products_info----------------------------- */

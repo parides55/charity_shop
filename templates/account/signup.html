@@ -8,37 +8,45 @@
 
 {% block content %}
 
-<div class="container-fluid home-div">
-    <div class="row home-row text-center">
-        <div class="col-lg-6 col-md-12">
-                {% comment %} {% element h1 %}
-                    {% trans "Sign Up" %}
-                {% endelement %} {% endcomment %}
-                {% setvar link %}
-                    <a href="{{ login_url }}">
-                    {% endsetvar %}
-                    {% setvar end_link %}
-                    </a>
-                {% endsetvar %}
-
-                {% element p %}
-                    {% blocktranslate %}Already have an account? Then please {{ link }}sign in{{ end_link }}.{% endblocktranslate %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col col-md-12 text-center mt-5">
+            {% setvar link %}
+                <a href="{{ login_url }}">
+            {% endsetvar %}
+            {% setvar end_link %}
+                </a>
+            {% endsetvar %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-md-12 text-center">
+            {% element p %}
+                {% blocktranslate %}Already have an account? Then please {{ link }}sign in{{ end_link }}.{% endblocktranslate %}
+            {% endelement %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-md-12 text-center mb-5">
+            {% url 'account_signup' as action_url %}
+            {% element form form=form method="post" action=action_url tags="entrance,signup" %}
+            {% slot body %}
+                {% csrf_token %}
+                {% element fields form=form unlabeled=True %}
                 {% endelement %}
-
-                {% url 'account_signup' as action_url %}
-                {% element form form=form method="post" action=action_url tags="entrance,signup" %}
-                    {% slot body %}
-                        {% csrf_token %}
-                        {% element fields form=form unlabeled=True %}
-                        {% endelement %}
-                        {{ redirect_field }}
-                    {% endslot %}
-                    {% slot actions %}
-                        {% element button tags="prominent,signup" type="submit" %}
-                            {% trans "Sign Up" %}
-                        {% endelement %}
-                    {% endslot %}
-                {% endelement %}
+                {{ redirect_field }}
+            {% endslot %}
+        </div>
+    </div>
+    <div class="row row-cols-3">
+        <div class="col-lg-6 col-md-12 text-center">
+            {% slot actions %}
+                    {% element button tags="prominent,signup" type="submit" %}
+                        {% trans "Sign Up" %}
+                    {% endelement %}
+                {% endslot %}
+                
+            {% endelement %}
         </div>
     </div>
 </div>

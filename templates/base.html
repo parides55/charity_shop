@@ -29,6 +29,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" crossorigin="anonymous">
 
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
@@ -36,8 +38,11 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-md" id="navbar-in-nav">
+      <div class="container-fluid text-center" id="title-div">
+        <img src="{% static 'images/textLogo_NoBuffer.png' %}" width="250"  alt="Charity Treasures">
+      </div>
         <div class="container-fluid">
-          <a class="navbar-brand ps-3" href="{% url 'home' %}"><img src="{% static 'images/icononly_transparent_nobuffer.png' %}" alt="Logo" width="40" height="34"></a>
+          <a class="navbar-brand ps-3" href="{% url 'home' %}"><img src="{% static 'images/icononly_transparent_nobuffer.png' %}" alt="Logo" width="45" height="39"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -83,7 +88,7 @@
       </nav>
 
       <div class="positoin-realative">
-        <div class="position-absolute top-20 end-0" id="user-name-div">
+        <div class="position-absolute top-20 end-0 me-1 pe-3 mt-1">
           {% if user.is_authenticated %}
           <p>Hi <strong>{{request.user}}!</strong></p>
           {%  else %}

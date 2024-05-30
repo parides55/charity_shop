@@ -6,7 +6,7 @@
 
 <div class="container-fluid my-5 px-5">
     <div class="row">
-        <div class="col-lg-5 col-md-12 my-md-4 px-3">
+        <div class="col-lg-5 col-md-12 my-md-4 px-3 animate__animated animate__fadeInLeft animate__slow">
             {% if "placeholder" in our_story.profile_image.url %}
             <img class="card-img-top img-thumbnail" src="{% static 'images/default.jpg' %}"
                 alt="placeholder image">
@@ -15,7 +15,7 @@
                 alt="{{ our_story.title }}">
             {% endif %}
         </div>
-        <div class="col-lg-7 col-md-12 my-md-4 px-3">
+        <div class="col-lg-7 col-md-12 my-md-4 px-3 animate__animated animate__fadeInRight animate__slow">
             <article>{{our_story.content | safe}}</article>
         </div>
     </div>
