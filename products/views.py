@@ -24,7 +24,6 @@ def view_product(request, slug):
             order.user = request.user
             order.product = product
             order.amount = product.price
-            order.quantity = 1
             order.save()
             messages.success(request, 'Product added to basket')
         else:
@@ -45,7 +44,7 @@ def home(request):
 def basket(request):
 
     items = Basket.objects.filter(user=request.user)
-    total = sum(item.amount for item in items)
+    total = sum(item.amount*item.quantity for item in items)
 
     return render(request, 'products/basket.html', {'items': items, 'total': total})
 
@@ -57,3 +56,9 @@ def remove_item(request, basket_id):
     messages.add_message(request, messages.SUCCESS, 'Item removed!')
 
     return HttpResponseRedirect(reverse('basket'))
+
+def after_payment(request):
+    return render(
+        request,
+        'products/after_payment.html',
+    )

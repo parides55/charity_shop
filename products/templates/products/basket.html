@@ -23,20 +23,20 @@
                     <tr>
                         <td>{{ item.product.title }}</td>
                         <td>{{ item.quantity }}</td>
-                        <td>${{ item.product.price }}</td>
-                        <td>${{ item.amount }}</td>
+                        <td><i class="fa-solid fa-euro-sign"></i>{{ item.amount }}</td>
+                        <td><i class="fa-solid fa-euro-sign"></i>{% widthratio item.quantity 1 item.amount %}</td>
                         <td><button type="submit" class="btn btn-danger btn-to-remove-item"
                             data-basket_id='{{item.id}}'><i class="fa-solid fa-minus"></i></button></td>
                     </tr>
                     {% endfor %}
                     <tr>
                         <td colspan="3" class="text-end"><strong>Total Amount</strong></td>
-                        <td><strong>${{ total }}</strong></td>
+                        <td><strong><i class="fa-solid fa-euro-sign"></i>{{ total }}</strong></td>
                     </tr>
                 </tbody>
             </table>
             <span><a href="{% url 'products' %}" class="btn btn-secondary">Continue Shopping</a></span>
-            <span><a href="#" class="btn btn-success">Proceed to Checkout</a></span>
+            <span><a href="https://buy.stripe.com/test_00gbLU6c58tsf84aEE" class="btn btn-success">Proceed to Checkout</a></span>
         </div>
     </div>
 </div>
