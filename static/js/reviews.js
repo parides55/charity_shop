@@ -20,12 +20,10 @@ writeReviewLink.addEventListener('click', () => {
 });
 
 // To edit reviews
-console.log("Ready to start editing");
 for (let button of editCommentButtons) {
     button.addEventListener('click', (e) => {
-        console.log("Edit button clicked");
         let reviewId = e.target.getAttribute('data-review_id');
-        // let reviewContent = document.getElementById(`review${reviewId}`).innerText;
+        let reviewContent = document.getElementById(`review${reviewId}`).innerText;
         // reviewText.value = reviewContent;
         reviewForm.setAttribute("action", `edit_review/${reviewId}/`);
         reviewModal.show();

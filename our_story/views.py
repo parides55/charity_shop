@@ -36,3 +36,9 @@ def contact_us(request):
         'our_story/contact-us.html',
         {"contact_us_form": contact_us_form},
         )
+
+def privacy(request):
+    return render(
+        request,
+        'our_story/privacy.html',
+        )

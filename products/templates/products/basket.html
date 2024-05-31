@@ -4,11 +4,11 @@
 {% load static %}
 
 <!-- Basket Overview Section -->
-<h1 class="mt-5 ps-4 pt-5">Your Basket</h1>
+<h1 class="mt-5 ps-4 pt-5 animate__animated animate__fadeInDown animate__slow">Your Basket</h1>
 
 <div class="container-fluid home-div">
     <div class="row home-row">
-        <div class="col-lg-6 col-md-12">
+        <div class="col-lg-6 col-md-12 animate__animated animate__fadeInUp animate__slow">
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -26,7 +26,7 @@
                         <td>${{ item.product.price }}</td>
                         <td>${{ item.amount }}</td>
                         <td><button type="submit" class="btn btn-danger btn-to-remove-item"
-                            data-basket_id='{{item.id}}'>Remove</button></td>
+                            data-basket_id='{{item.id}}'><i class="fa-solid fa-minus"></i></button></td>
                     </tr>
                     {% endfor %}
                     <tr>

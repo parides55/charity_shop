@@ -11,7 +11,10 @@
             <h2 class="animate__animated animate__fadeInUp animate__delay-2s">
                 Every Purchase, A Heartbeat of Hope!
             </h2>
-            <h3><a class="text-light animate__animated animate__fadeInUp animate__delay-2s" href="{% url 'account_signup' %}">Sign up</a> <span class="animate__animated animate__fadeInUp animate__delay-2s">and donate today to help</span> <a class="text-light animate__animated animate__fadeInUp animate__delay-2s" href="{% url 'our_story' %}">our cause</a></h3>
+            <h3>
+                <a class="{% if user.is_authenticated %}d-none{% endif %} text-decoration-none text-light animate__animated animate__fadeInUp animate__delay-2s" href="{% url 'account_signup' %}">Sign up <span class="text-body">and</span></a> 
+                <span class="animate__animated animate__fadeInUp animate__delay-2s"> Donate today to help</span> 
+                <a class="text-light text-decoration-none animate__animated animate__fadeInUp animate__delay-2s" href="{% url 'our_story' %}">our cause</a></h3>
         </div>
     </div>
 </div>
