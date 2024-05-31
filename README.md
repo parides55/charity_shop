@@ -20,25 +20,31 @@
 
 This projects is a charity website where mostly second hands items are sold in order to raise money and donate to various charity organizations.
 
-It's main features are a product list where users can view items and add the to their basket in order to buy. Also, charity events are advertised in order to inform the website's users and visitors.
+It's main features are a product list where users can view items and add them to their basket in order to buy. Also, charity events are advertised in order to inform the website's users and visitors.
 
-The project was built keeping the Agile management principles in mind, and I utilized many of GitHub's features such as Issue and Projects to complete the website.
-
-Kanban Board for project
-
-Closed Issues on GitHub for the project
+The project was built keeping the Agile management principles in mind, and I utilized many of GitHub's features such as Issue and Projects to complete the website. A [Kanban board](https://github.com/users/parides55/projects/3) was used as well to implement the users stories and to keep track of the features left to do.
 
 I used GitHub issues for the product backlog containing the user stories and the labels feature in GitHub Issues for prioritizing features based on the MoSCoW method, and categorizing the user stories.
+
+<details>
+<summary>Issues on GitHub with labels</summary>
+
+![Issues on GitHub with labels](Readme_docs\issues_with_MoSCoW.png)
+
+</details>
 
 ## User stories
 
 User stories were prepared using GitHub Issues and assigned acceptance criteria for each story, which were used for the manual testing.
 
-User Stories can been seen below under User Story Testing, and in the GitHub Issues for full details including screenshots and acceptance criteria.
+User Stories can been seen below under [User Story Testing](#testing), and in the GitHub Issues for full details including screenshots and acceptance criteria.
 
 ## UX
 
 ### Typography
+
+- [Roboto google fonts](https://fonts.google.com/specimen/Roboto?query=roboto) were used for the headings.
+- [Montserrat google fonts](https://fonts.google.com/specimen/Montserrat?query=montse) were user for all other text.
 
 ### Wireframes
 
@@ -50,24 +56,26 @@ User Stories can been seen below under User Story Testing, and in the GitHub I
 
 ## Technologies used
 
-## Testing
-
 - [Python](https://www.python.org/)
 - [pip](https://pip.pypa.io/en/stable/) for installing Python packages.
 - [Git](https://git-scm.com/) for version control.
 - [GitHub](https://github.com/) for storing the repository online during development.
-- GitHub Projects was invaluable throughout the project and helped me keep track of things to do and bugs to fix - you can see [the project's board here](https://github.com/users/davidindub/projects/7).
-- [GitPod](https://gitpod.io/) as a cloud based IDE.
+- GitHub Projects was invaluable throughout the project and helped me keep track of things to do and bugs to fix - you can see [the project's board here](https://github.com/users/parides55/projects/3).
+- Visual Studio Code as an IDE.
 - [Balsamiq](https://balsamiq.com/wireframes/) for wireframing.
 - [Bootstrap 5](https://getbootstrap.com/) as a front end framework.
-- [Google Chrome](https://www.google.com/intl/en_ie/chrome/), [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/) and [Safari](https://www.apple.com/safari/) for testing on macOS Monterey.
-- [Microsoft Edge](https://www.microsoft.com/en-us/edge) for testing on Windows 11.
+- [Google Chrome](https://www.google.com/intl/en_ie/chrome/), [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/) and [Safari](https://www.apple.com/safari/), [Microsoft Edge](https://www.microsoft.com/en-us/edge) for testing on Windows 11.
 - [Safari](https://www.apple.com/safari/) on iOS and iPadOS 15.
 - [Google Chrome](https://www.google.com/intl/en_ie/chrome/) on Android 12.
 - [diagrams.net](https://www.diagrams.net/) for drawing database diagrams.
 - [favicon.io](https://favicon.io/favicon-generator/) to make a favicon for site.
 - [Device Frames](https://deviceframes.com/) for the device mockups in this README.
 - [Meta Tags](https://metatags.io/) to prepare the Meta tags for social media share previews.
+- [ColorSpace](https://mycolor.space/?hex=%23CCE0C5&sub=1) to choose the color palettes.
+- [Design.com](https://www.design.com/) to design, generate and edit the logo.
+- [Am I responsive](https://ui.dev/amiresponsive) to generate the mock ups.
+
+## Testing
 
 ## Deployment
 
