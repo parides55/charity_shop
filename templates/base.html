@@ -56,11 +56,12 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-md" id="navbar-in-nav">
-      <div class="container-fluid text-center" id="title-div">
+      <div class="container-fluid text-center d-none d-md-inline" id="title-div">
         <img src="{% static 'images/textLogo_NoBuffer.png' %}" width="250"  alt="Charity Treasures">
       </div>
         <div class="container-fluid">
           <a class="navbar-brand ps-3" href="{% url 'home' %}"><img src="{% static 'images/icononly_transparent_nobuffer.png' %}" alt="Logo" width="45" height="39"></a>
+          <img class="d-inline d-md-none" src="{% static 'images/textLogo_NoBuffer.png' %}" width="150"  alt="Charity Treasures">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
