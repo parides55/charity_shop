@@ -1,5 +1,8 @@
 [**Charity Treasures**](https://charity-shop-pp4-2870c2ac8971.herokuapp.com/)
 
+<details>
+<summary>Table of Contents</summary>
+
 - [Introduction](#introduction)
 - [User stories](#user-stories)
 - [UX](#ux)
@@ -10,11 +13,18 @@
 - [Features](#features)
 - [Technologies used](#technologies-used)
 - [Testing](#testing)
+  - [Browser Compatibility](#browser-compatibility)
+  - [Responsiveness](#responsiveness)
+  - [Performance Testing](#performance-testing)
+  - [Accessibility Testing](#accessibility-testing)
+  - [User Story Testing](#user-story-testing)
+  - [Code Validation](#code-validation)
 - [Deployment](#deployment)
 - [Credits](#credits)
   - [Content](#content)
   - [Media](#media)
   - [Acknowledgements](#acknowledgements)
+</details>
 
 ## Introduction
 
@@ -29,7 +39,7 @@ I used GitHub issues for the product backlog containing the user stories and t
 <details>
 <summary>Issues on GitHub with labels</summary>
 
-![Issues on GitHub with labels](Readme_docs\issues_with_MoSCoW.png)
+![Issues on GitHub with labels](Readme_docs/issues_with_MoSCoW.png)
 
 </details>
 
@@ -37,7 +47,7 @@ I used GitHub issues for the product backlog containing the user stories and t
 
 User stories were prepared using GitHub Issues and assigned acceptance criteria for each story, which were used for the manual testing.
 
-User Stories can been seen below under [User Story Testing](#testing), and in the GitHub Issues for full details including screenshots and acceptance criteria.
+User Stories can been seen below under [User Story Testing](#user-story-testing), and in the GitHub Issues for full details including screenshots and acceptance criteria.
 
 ## UX
 
@@ -74,8 +84,21 @@ User Stories can been seen below under [User Story Testing](#testing), and in t
 - [ColorSpace](https://mycolor.space/?hex=%23CCE0C5&sub=1) to choose the color palettes.
 - [Design.com](https://www.design.com/) to design, generate and edit the logo.
 - [Am I responsive](https://ui.dev/amiresponsive) to generate the mock ups.
+- [Stripe](https://stripe.com/gb) as an external provider to handle payments
 
 ## Testing
+
+### Browser Compatibility
+
+### Responsiveness
+
+### Performance Testing
+
+### Accessibility Testing
+
+### User Story Testing
+
+### Code Validation
 
 ## Deployment
 
