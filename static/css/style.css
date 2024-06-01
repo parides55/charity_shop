@@ -96,7 +96,35 @@ li {
 
 /* ------------------------------Events----------------------------- */
 .event {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
     height: 450px;
+}
+
+.event img {
+    width: 100%;
+    height: auto;
+}
+
+.event .card-body {
+    padding: 1.5rem;
+}
+
+.event .card-title {
+    margin-top: 0;
+}
+
+.event .card-text {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+.event .date {
+    color: #555;
+    font-size: 0.9rem;
 }
 
 /* ------------------------------Event_Info-------------------------- */

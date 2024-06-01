@@ -5,30 +5,48 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
-<div class="container text-center">
-    <div class="row justify-content-center">
-        <div class="col-lg-6 col-md-12 my-5 px-4">
-            {% if "placeholder" in product.product_image.url %}
-            <img class="card-img-top img-thumbnail" src="{% static 'images/default.jpg' %}"
-                alt="placeholder image">
-            {% else %}
-            <img class="card-img-top img-thumbnail" src=" {{ product.product_image.url }}"
-                alt="{{ product.title }}">
-            {% endif %}
+<header class="text-center py-4 animate__animated animate__fadeInDown">
+    <h1>{{product.title}}</h1>
+</header>
+
+<div class="container-fluid text-center">
+    <div class="row row-cols-md-2">
+        <div class="container my-4 d-flex justify-content-center justify-content-md-end">
+            <div class="row g-4">
+                <div class="col col-sm-12 animate__animated animate__fadeInDown animate__slower">
+                    <div class="card p-4" style="width: 20rem;">
+                        {% if "placeholder" in product.product_image.url %}
+                        <img class="card-img-top img-fluid" src="{% static 'images/default.jpg' %}"
+                            alt="placeholder image">
+                        {% else %}
+                        <img class="card-img-top img-fluid" src=" {{ product.product_image.url }}"
+                            alt="{{ product.title }}">
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-lg-6 col-md-12 my-5 px-4">
-        <p>{{product.description | safe}}</p>
-        <p><i class="fa-solid fa-euro-sign"></i> {{ product.price }}</p>
-        {% if user.is_authenticated %}
-            <form id=basket_form method='post'>
-                {{ basket_form | crispy }}
-                {% csrf_token %}
-                <input type="number" name="quantity" aria-invalid="true" id="id_quantity" value="1">
-                <button type="submit" class="btn btn-primary">Add to Basket</button>
-            </form>
-            {% else %}
-            <p>Please <a href="{% url 'account_login' %}">Login</a> to add items to your basket</p>
-            {% endif %}
+        <div class="container my-4 d-flex justify-content-center justify-content-md-start">
+            <div class="row g-4">
+                <div class="col col-sm-12 animate__animated animate__fadeInDown animate__slower">
+                    <div class="card p-4" style="width: 20rem;">
+                        {{product.description | safe}}
+                        <div class="card-body">
+                            <p class="card-text"><i class="fa-solid fa-euro-sign"></i> {{product.price}}</p>
+                            {% if user.is_authenticated %}
+                                <form id=basket_form method='post'>
+                                    {{ basket_form | crispy }}
+                                    {% csrf_token %}
+                                    <input type="number" name="quantity" aria-invalid="true" id="id_quantity" value="1">
+                                    <button type="submit" class="btn btn-primary m-4">Add to Basket</button>
+                                </form>
+                            {% else %}
+                                <p>Please <a href="{% url 'account_login' %}">Login</a> to add items to your basket</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
