@@ -24,6 +24,7 @@
   - [Content](#content)
   - [Media](#media)
   - [Acknowledgements](#acknowledgements)
+
 </details>
 
 ## Introduction
@@ -74,9 +75,6 @@ User Stories can been seen below under [User Story Testing](#user-story-testing
 - Visual Studio Code as an IDE.
 - [Balsamiq](https://balsamiq.com/wireframes/) for wireframing.
 - [Bootstrap 5](https://getbootstrap.com/) as a front end framework.
-- [Google Chrome](https://www.google.com/intl/en_ie/chrome/), [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/) and [Safari](https://www.apple.com/safari/), [Microsoft Edge](https://www.microsoft.com/en-us/edge) for testing on Windows 11.
-- [Safari](https://www.apple.com/safari/) on iOS and iPadOS 15.
-- [Google Chrome](https://www.google.com/intl/en_ie/chrome/) on Android 12.
 - [diagrams.net](https://www.diagrams.net/) for drawing database diagrams.
 - [favicon.io](https://favicon.io/favicon-generator/) to make a favicon for site.
 - [Device Frames](https://deviceframes.com/) for the device mockups in this README.
@@ -85,6 +83,9 @@ User Stories can been seen below under [User Story Testing](#user-story-testing
 - [Design.com](https://www.design.com/) to design, generate and edit the logo.
 - [Am I responsive](https://ui.dev/amiresponsive) to generate the mock ups.
 - [Stripe](https://stripe.com/gb) as an external provider to handle payments
+- [Google Chrome](https://www.google.com/intl/en_ie/chrome/), [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/) and [Safari](https://www.apple.com/safari/), [Microsoft Edge](https://www.microsoft.com/en-us/edge) for testing on Windows 11.
+- [Safari](https://www.apple.com/safari/) on iOS and iPadOS 15.
+- [Google Chrome](https://www.google.com/intl/en_ie/chrome/) on Android 12.
 
 ## Testing
 
@@ -97,6 +98,151 @@ User Stories can been seen below under [User Story Testing](#user-story-testing
 ### Accessibility Testing
 
 ### User Story Testing
+
+<details>
+<summary>As a first-time visitor I want to have a clear explanation of the website so that I know what is it about.</summary>
+
+AC1 : If I visit the homepage I am greeted with a eye catching slogan/hero image
+
+AC2 : I should be able to tell the purpose of the site easily
+
+Result: Pass ✅
+</details>
+
+<details>
+<summary>As a visitor to the site I want to read the Privacy policy before I sign up so that I can know how my data will be used.</summary>
+
+AC1: By clicking on a link to be directed to a page about the privacy policy
+
+Result: Pass ✅
+</details>
+
+<details>
+<summary>As a visitor I can signup to the site so that I can buy products, donate, and leave a review.</summary>
+
+AC1 : By filling the signup form be able to register an account
+
+AC2 : Be able to Log In
+
+AC3: After logging in the user is able to buy products, donate and leave a review
+
+Result: Pass ✅
+</details>
+
+<details>
+<summary>As a user I can view all the products so that I can select one to view to buy it.</summary>
+
+AC1 : When the user clicks on a link a full list of products is displayed.
+
+AC2 : When a user clicks on a product it can see all the information about it.
+
+Result: Pass ✅
+</details>
+
+<details>
+<summary>As a user I can add products to my favorites so that I can review them later.</summary>
+
+AC1 : By clicking on a button the product is added in user's favorites list.
+
+AC2 : The item can also be removed from the list
+
+Result: Pass ✅
+</details>
+
+<details>
+<summary>As a user I can add products to my basket so that I can review them again before I buy them.</summary>
+
+AC1 : By clicking a button the product is added to user's basket
+
+AC2 : In the user's basket all the selected products are displayed with the total price.
+
+AC3 : By clicking a button the user in taken to a page to insert payment details and once payment is received the items are deleted from the database.
+
+AC4 : The user can remove items from the basket.
+
+Result: Pass ✅
+</details>
+
+<details>
+<summary>As a user I can leave a review on each event so that I can communicate my thoughts.</summary>
+
+AC1 : An authorized user can leave a review on each event
+
+AC2 : All reviews are displayed after admin's approval
+
+AC3 : An authorized user can edit and delete their reviews.
+
+Result: Pass ✅
+</details>
+
+<details>
+<summary>As a user I can view all the events available so that I know what they are about and attend them.</summary>
+
+AC1 : By clicking on a link the user can see a full list of the events
+
+AC2 : By clicking on an event the user can see all the information about the event
+
+Result: Pass ✅
+</details>
+
+<details>
+<summary>As user/visitor I can read the story of the site so that I can decide if I want to become a member.</summary>
+
+AC1 : By clicking on a link the user/visitor can see the information about the website.
+
+Result: Pass ✅
+</details>
+
+<details>
+<summary>A user/visitor I can contact the admin of the site by filling out the contact us form so that I can communicate with the admin.</summary>
+
+AC1 : When the user/visitor clicks on a link is taken to the Contact Us form.
+
+AC2 : By filling out the form a message is send to the admin and confirmation message is shown to the user/visitor.
+
+Result: Pass ✅
+</details>
+
+<details>
+<summary>As an admin I can add products and events so that I can raise money for the charities.</summary>
+
+AC1 : Provide is a logged in user they can add/remove/edit products and events
+
+Result: Pass ✅
+</details>
+
+<details>
+<summary>As an admin I can read and approve the user’s reviews so that I can filter out objectionable reviews.</summary>
+
+AC1 : Provided a logged in user they can approve/disapprove users reviews
+
+AC2 : Provided a logged in user they can add or delete reviews.
+
+Result: Pass ✅
+</details>
+
+<details>
+<summary>As an admin I can create draft events so that I can finish writing the content later.</summary>
+
+AC1 : Provided a logged in user I can add events and save them as drafts.
+
+Result: Pass ✅
+</details>
+
+<details>
+<summary>As an admin I can create or update the about page content so that it is available on the site.</summary>
+
+AC1 : Provided a logged in user they can add and update the content in the about page.
+
+Result: Pass ✅
+</details>
+
+<details>
+<summary>As an admin I can view the orders made by users so that I can manage them.</summary>
+
+AC1 : Provided a logged in user they can view the orders of the users.
+Result: Pass ✅
+</details>
 
 ### Code Validation
 
