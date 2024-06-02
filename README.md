@@ -11,6 +11,11 @@
 - [Accessibility](#accessibility)
 - [Database Design](#database-design)
 - [Features](#features)
+  - [Navigation Bar](#navigation-bar)
+  - [Footer](#footer)
+  - [Home Page](#home-page)
+  - [Our Story](#our-story)
+  - [Our products](#our-products)
 - [Technologies used](#technologies-used)
 - [Testing](#testing)
   - [Browser Compatibility](#browser-compatibility)
@@ -64,6 +69,28 @@ User Stories can been seen below under [User Story Testing](#user-story-testing
 ## Database Design
 
 ## Features
+
+This website utilizes numerous features from an e-commerce website and a blog. Also, it offers the possibility to the users to sign up by registering a username, an email and a password, in order to allow them to buy products and leave comments/reviews on the events shown.
+
+### Navigation Bar
+
+The navigation bar is shown in all pages and it provides an easy way to navigate throughout the whole website. On the left side the logo of the organization is shown and it is also a link to the home page. A link to the home page is the organization's name on the top which is displayed continuously in all displays. On the right side the user icons are found which they are only shown if the user is authenticated, otherwise just a login icon is shown. Through the user icons, the users can navigate to their favorite page, where their favorite products are stored, to the their basket so they can proceed to check out or to remove the selected products and also to log out.
+
+### Footer
+
+The footer is shown on all pages and it's purpose is to provide a quick and easy access to the this repository and to the privacy policy of the organization. Also, other social media icons can be used in the future, but at this time the webpage does not have any other media.
+
+### Home Page
+
+This is the first page that a user or a visitor will see. It contains in the middle the logo of the organization with and inviting and informative message to the user/visitor. If the user is not authenticated the message includes a sing up link to invite the visitor to register. If it is a returning user the sign up link is not shown and the user is greeted on the top right corner with its username. This feature is displayed on all pages.
+
+### Our Story
+
+This page contains the history of the organization and it explains the website's purpose. It has a picture of the creator and a paragraph text. This page is fully controlled from the admin panel, provided by Django, where the admin can update the page from.
+
+### Our products
+
+This is one of the two main pages of the website where all the products are advertised. The products are displayed on cards and each card shows the products image, its title and price, a button to View the product and a button to add the product to the favorites.
 
 ## Technologies used
 
