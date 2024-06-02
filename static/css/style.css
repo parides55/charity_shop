@@ -86,6 +86,7 @@ li {
 
 .btn:hover {
     background-color: #3F4A3C;
+    border-color: #3F4A3C;
     color: white;
 }
 
