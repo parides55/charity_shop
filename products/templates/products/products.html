@@ -25,7 +25,7 @@
                         <h5 class="card-title">{{product.title}}</h5>
                         <p class="card-text"><i class="fa-solid fa-euro-sign"></i> {{product.price}}</p>
                         <span class="d-flex justify-content-between">
-                        <a href="{% url 'view-product' product.slug %}" class="btn btn-primary view-info">View</a>
+                        <a href="{% url 'view-product' product.slug %}" class="btn view-info">View</a>
                         {% if user.is_authenticated %}
                             <form action="{% url 'add_to_favorites' product.id %}" method="post">
                                 {% csrf_token %}

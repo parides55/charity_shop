@@ -12,9 +12,10 @@
                 Every Purchase, A Heartbeat of Hope!
             </h2>
             <h3>
-                <a class="{% if user.is_authenticated %}d-none{% endif %} text-decoration-none text-light animate__animated animate__fadeInUp animate__delay-2s" href="{% url 'account_signup' %}">Sign up and</a> 
+                <a class="{% if user.is_authenticated %}d-none{% endif %} text-decoration-none animate__animated animate__fadeInUp animate__delay-2s" href="{% url 'account_signup' %}">Sign up</a>
+                <span class="{% if user.is_authenticated %}d-none{% endif %} animate__animated animate__fadeInUp animate__delay-2s"> and </span> 
                 <span class="animate__animated animate__fadeInUp animate__delay-2s"> Donate today to help</span> 
-                <a class="text-light text-decoration-none animate__animated animate__fadeInUp animate__delay-2s" href="{% url 'our_story' %}">our cause</a></h3>
+                <a class="text-decoration-none animate__animated animate__fadeInUp animate__delay-2s" href="{% url 'our_story' %}">our cause</a></h3>
         </div>
     </div>
 </div>

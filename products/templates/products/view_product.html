@@ -38,7 +38,7 @@
                                     {{ basket_form | crispy }}
                                     {% csrf_token %}
                                     <input type="number" name="quantity" aria-invalid="true" id="id_quantity" value="1">
-                                    <button type="submit" class="btn btn-primary m-4">Add to Basket</button>
+                                    <button type="submit" class="btn view-info m-4">Add to Basket</button>
                                 </form>
                             {% else %}
                                 <p>Please <a href="{% url 'account_login' %}">Login</a> to add items to your basket</p>

@@ -33,8 +33,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .view-info {
     background-color: transparent;
-    color: gray;
-    border-color: gray;
+    color: #3F4A3C;
+    border-color: #3F4A3C;
 }
 
 /* ------------------------------NavBar----------------------------- */
@@ -49,7 +49,7 @@ li {
 #navbar-in-nav {
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #3F4A3C;
 }
 
 .user-icons {
@@ -67,7 +67,7 @@ li {
 
 /* ------------------------------Products----------------------------- */
 .card {
-    background-color: white;
+    background-color: #F8FFF8;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
@@ -87,12 +87,10 @@ li {
 .btn:hover {
     background-color: #3F4A3C;
     border-color: #3F4A3C;
-    color: white;
+    color: #F8FFF8;
 }
 
 /* ------------------------------Products_info----------------------------- */
-
-
 
 /* ------------------------------Events----------------------------- */
 .event {
