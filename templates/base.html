@@ -82,24 +82,31 @@
             </ul>
             <span class="navbar-text">
               <ul class="navbar-nav user-icons">
-              {% if user.is_authenticated %}
-                    <li class="nav-item">
-                      <a href="{% url 'basket' %}" aria-label="Basket Icon shown when the user is logged in">
-                        <i class="fa-solid fa-basket-shopping navbar-icons"></i>
+                {% if user.is_authenticated %}
+                  <li class="nav-item">
+                    <a href="{% url 'favorites' %}" aria-label="Link to favorites shown when the user is logged in">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1rem" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{% url 'basket' %}" aria-label="Link to basket shown when the user is logged in">
+                      <i class="fa-solid fa-basket-shopping navbar-icons"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}" href="{% url 'account_logout' %}" aria-label="Log out icon shown when user is logged in">
+                      <i class="fa-solid fa-right-from-bracket navbar-icons"></i>
+                    </a>
+                  </li>
+                {% else %}
+                  <li class="nav-item">
+                      <a class="nav-link {% if request.path == login_url %}active" aria-current="page{% endif %}" href="{% url 'account_login' %}" aria-label="Login icon shown when user if not logged in">
+                        <i class="fa-solid fa-right-to-bracket navbar-icons"></i>
                       </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}" href="{% url 'account_logout' %}" aria-label="Log out icon shown when user is logged in">
-                        <i class="fa-solid fa-right-from-bracket navbar-icons"></i>
-                      </a>
-                    </li>
-                    {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == login_url %}active" aria-current="page{% endif %}" href="{% url 'account_login' %}" aria-label="Login icon shown when user if not logged in">
-                          <i class="fa-solid fa-right-to-bracket navbar-icons"></i>
-                        </a>
-                    </li>
-                    {% endif %}
+                  </li>
+                {% endif %}
               </ul>
             </span>
           </div>

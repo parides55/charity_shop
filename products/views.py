@@ -1,8 +1,8 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib import messages
 from django.views import generic
 from django.http import HttpResponseRedirect 
-from .models import Product, Basket
+from .models import Product, Basket, Favorite
 from .forms import BasketForm
 
 # Create your views here.
@@ -58,7 +58,38 @@ def remove_item(request, basket_id):
     return HttpResponseRedirect(reverse('basket'))
 
 def after_payment(request):
+
     return render(
         request,
         'products/after_payment.html',
     )
+
+def add_to_favorites(request, product_id):
+
+    product = get_object_or_404(Product, id=product_id)
+    favorite, created = Favorite.objects.get_or_create(user=request.user, product=product)
+
+    if created:
+        messages.success(request, f'{product.title} has been added to your favorites.')
+    else:
+        messages.info(request, f'{product.title} is already in your favorites.')
+    
+    return redirect('products')
+
+def favorites(request):
+
+    favorites = Favorite.objects.filter(user=request.user)
+
+    return render(
+        request,
+        'products/favorites.html',
+        {'favorites': favorites,},
+        )
+
+def remove_favorite(request, favorite_id):
+
+    favorite = get_object_or_404(Favorite, id=favorite_id, user=request.user)
+    favorite.delete()
+    messages.add_message(request, messages.SUCCESS, 'Favorite removed!')
+
+    return HttpResponseRedirect(reverse('favorites'))

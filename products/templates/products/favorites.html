@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<header class="text-center py-4 animate__animated animate__fadeInDown animate__slow">
+    <h1>{{request.user}}'s Favorite Products</h1>
+</header>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 mt-5">
+            <div class="row">
+                {% for favorite in favorites %}
+                <div class="card mx-auto p-2 my-4 animate__animated animate__fadeInDown animate__slow" style="width: 18rem;">
+                    {% if "placeholder" in favorite.product.product_image.url %}
+                    <img class="card-img-top" src="{% static 'images/default.jpg' %}"
+                        alt="placeholder image">
+                    {% else %}
+                    <img class="card-img-top" src=" {{ favorite.product.product_image.url }}"
+                        alt="{{ product.title }}">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{favorite.product.title}}</h5>
+                        <p class="card-text"><i class="fa-solid fa-euro-sign"></i> {{favorite.product.price}}</p>
+                        <span class="d-flex justify-content-between">
+                        <a href="{% url 'view-product' favorite.product.slug %}" class="btn btn-primary view-info">View</a>
+                        <button type="submit" class="btn btn-danger btn-to-remove-favorite"
+                        data-favorite_id='{{favorite.id}}'>Remove</button>
+                        </span>
+                    </div>
+                </div>
+                {% if forloop.counter|divisibleby:3 %}
+            </div>
+            <div class="row">
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% for favorite in favorites %}
+<div class="modal fade" id="favoriteRemovalModal" tabindex="-1" aria-labelledby="FavoriteRemovalModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{favorite.product.title}}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Please confirm you want to remove the above item. </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="#" class="btn btn-primary" id="removeFavoriteConfirm">Remove</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}
+
+{% block forJS %}
+<script src="{% static 'js/favorites.js' %}"></script>
+{% endblock %}
