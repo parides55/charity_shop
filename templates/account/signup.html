@@ -21,6 +21,7 @@
     </div>
     <div class="row">
         <div class="col col-md-12 text-center">
+            <a href="{% url 'privacy' %}">Privacy Policy</a>
             {% element p %}
                 {% blocktranslate %}Already have an account? Then please {{ link }}sign in{{ end_link }}.{% endblocktranslate %}
             {% endelement %}
@@ -47,7 +48,6 @@
                 {% endslot %}
                 
             {% endelement %}
-            <a class="pt-5 mt-5" href="{% url 'privacy' %}">Privacy Policy</a>
         </div>
     </div>
 </div>
