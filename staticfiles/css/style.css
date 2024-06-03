@@ -117,11 +117,11 @@ li {
 .event .card-text {
     margin-top: 0.5rem;
     font-size: 1rem;
-    color: #333;
+    color: #F8FFF8;
 }
 
 .event .date {
-    color: #555;
+    color: #F8FFF8;
     font-size: 0.9rem;
 }
 
@@ -158,7 +158,7 @@ li {
 }
 
 .blockquote {
-    border-left: 4px solid #ddd;
+    border-left: 4px solid #F8FFF8;
     padding-left: 20px;
     color: #666;
     margin: 20px 0;
@@ -168,7 +168,7 @@ li {
 .comments-section {
     margin-top: 40px;
     padding: 20px;
-    background: #f9f9f9;
+    background: #F8FFF8;
 }
 
 .comment-form {

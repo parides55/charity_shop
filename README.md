@@ -48,6 +48,12 @@ The project was built keeping the Agile management principles in mind, and I uti
 
 I used GitHub issues for the product backlog containing the user stories and the labels feature in GitHub Issues for prioritizing features based on the MoSCoW method, and categorizing the user stories.
 
+CRUD funtionality
+
+- Users can read all approved reviews, create, update and delete their own reviews.
+- Users can create, read, update and delete their basket and their favorites list.
+- Admins can create, read, update and delete all the content of the page (products, events, basket items, favorite items, reviews, messages, 'our story' content)
+
 <details>
 <summary>Issues on GitHub with labels</summary>
 
@@ -63,6 +69,10 @@ User Stories can been seen below under [User Story Testing](#user-story-testing
 
 ## UX
 
+As this is a charity shop, and it's purpose is to give hope to families and their kids, I decided to use the green color, as it is regarded as the color of hope. And by choosing a lighter version of the green color is less tiring to the eye and less distractive to the user's eye. Also, the logo of the organization illustrates a happy family. Using [ColorSpace](https://mycolor.space/?hex=%23CCE0C5&sub=1) and [Design.com](https://www.design.com/) the following colors were used.
+
+![Colors](Readme_docs/color_palette_optimized.png)
+
 ### Typography
 
 - [Roboto google fonts](https://fonts.google.com/specimen/Roboto?query=roboto) were used for the headings.
@@ -70,9 +80,30 @@ User Stories can been seen below under [User Story Testing](#user-story-testing
 
 ### Wireframes
 
+<details>
+<summary>Wireframes</summary>
+
+![Base.html](Readme_docs/wireframes/Base.html.png)
+![Home.html](Readme_docs/wireframes/Home.html.png)
+![Our_story.html](Readme_docs/wireframes/Our_story.html.png)
+![Our_Products.html](Readme_docs/wireframes/products.html.png)
+![View_product.htm](Readme_docs/wireframes/View_product.html.png)
+![Events.html](Readme_docs/wireframes/Events.html.png)
+![Events_info.html](Readme_docs/wireframes/Event_info.html.png)
+![favorites.html](Readme_docs/wireframes/favorites.html.png)
+![Contact_us.html](Readme_docs/wireframes/Contact_us.html.png)
+
+</details>
+
 ## Accessibility
 
+To ensure maximum accessibility for all users I used `aria-labels` on all Buttons and Anchor tags. Furthermore, after some research, I found that using SVGs instead font icons, maximizes the accessibility to the website. Especially, if the user is using their custom fonts via their browser. This is very nicely presented and explained in Seren Davies' presentation [Death to Icon Fonts](https://www.youtube.com/watch?v=9xXBYcWgCHA)
+
+I, also, ensured that every element still met AAA level in the [Web Content Accessibility Guidelines](https://www.w3.org/WAI/WCAG2AAA-Conformance) (WCAG).
+
 ## Database Design
+
+The Database Design can be separated into the Admin's databases and User's databases.
 
 ## Features
 
@@ -157,9 +188,15 @@ CVV number: Any 3 digit number
 
 ### Responsiveness
 
+- screenshots from dev tools
+
 ### Performance Testing
 
+- LightHouse report
+
 ### Accessibility Testing
+
+- WCAG evaluation tool
 
 ### User Story Testing
 
