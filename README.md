@@ -16,6 +16,12 @@
   - [Home Page](#home-page)
   - [Our Story](#our-story)
   - [Our products](#our-products)
+    - [View Product](#view-product)
+  - [Our events](#our-events)
+    - [View event](#view-event)
+  - [Contact Us](#contact-us)
+  - [Favorites](#favorites)
+  - [Basket](#basket)
 - [Technologies used](#technologies-used)
 - [Testing](#testing)
   - [Browser Compatibility](#browser-compatibility)
@@ -90,7 +96,37 @@ This page contains the history of the organization and it explains the website's
 
 ### Our products
 
-This is one of the two main pages of the website where all the products are advertised. The products are displayed on cards and each card shows the products image, its title and price, a button to View the product and a button to add the product to the favorites.
+This is one of the two main pages of the website where all the products are advertised. The products are displayed on cards and each card shows the products image, its title and price, a button to View the product and a button to add the product to the favorites. When the 'Heart' button is clicked a confirmation message is displayed on the top of the page indicating successful or not addition.
+
+#### View Product
+
+When the 'View' button is clicked on a product the user is taken on a page to view product's details and add it to basket in order to buy it. Also, there is an option to add the product to the user's favorites. When the 'Add to basket' or the 'Heart' button is clicked a confirmation message is displayed on the top of the page indicating successful or not action. Also, the 'Add to basket' button will redirect the user to their basket.
+
+### Our events
+
+This is the second main page of the website where charity events are advertise. The events are displayed on cards and on each card id shown the image of the event, the title of the event and a small description of the event. At the bottom a 'View' button, when clicked will take the user to see the event's details.
+
+#### View event
+
+When the view button is clicked the user is taken to the event's details. Once the page opens, the title of the event and a big hero image is displayed. Bellow the image a text describes the event and below it there's a review section. In the review section, provided the user is authenticated, the user can add a review/comment which will be displayed once it's been approved by the admin. Also, the review can be edited or deleted. The user cannot edit or delete others users's reviews.900
+
+### Contact Us
+
+This page contains a form which when a user or a visitor of the website can complete and send a message to the admin of the website. Once form is submitted a confirmation message is displayed on the top of the page indicating successful or not submition.
+
+### Favorites
+
+In this page the user can view their selected products. The products are displayed on cards which they contain a 'View' button, to take the user to view product's details and add it to basket, and a 'Remove' button, which deletes the product form the user's favorites. When the 'Remove' button is clicked a confirmation message is displayed on the top of the page indicating successful or not removal.
+
+### Basket
+
+This page displays all the items that the user intents to buy. The items are presented in a table format where the Product's title, the quantity, the price per item and the total price for the item is shown. At the bottom of the table the total amount of the order is shown. Also, next to each item there's a 'Remove' button so the user can remove any item. When clicked, a clicked a confirmation message is displayed on the top of the page indicating successful or not removal. At the bottom of the table there are 2 buttons. The 'Continue Shopping' button will redirect the user to the products page and the 'Proceed to Checkout' button will take the user to the payment link provided by Stripe. After successful payment the Stripe website will take the user back to the 'Charity Treasures' website and will show a 'Thank for your payment' message and display 2 buttons. One to search for more products and one to view the events. Lastly, after successful payment the user's items are deleted from their basket.
+
+Because this website is not registered yet with any authorities as an approved charity organization, the transaction happening in the Stripe payment link is in the test mode. Thus only one product is shown for purchase and in order for the purchase to be successful the following credit card details have to be inserted:
+
+Card Number : 4242 4242 4242 4242
+Expiry date: Any future date
+CVV number: Any 3 digit number
 
 ## Technologies used
 
@@ -102,14 +138,15 @@ This is one of the two main pages of the website where all the products are adve
 - Visual Studio Code as an IDE.
 - [Balsamiq](https://balsamiq.com/wireframes/) for wireframing.
 - [Bootstrap 5](https://getbootstrap.com/) as a front end framework.
+- [Bootstrap Icons](https://icons.getbootstrap.com/?q=comment) for the website's icons.
 - [diagrams.net](https://www.diagrams.net/) for drawing database diagrams.
 - [favicon.io](https://favicon.io/favicon-generator/) to make a favicon for site.
-- [Device Frames](https://deviceframes.com/) for the device mockups in this README.
 - [Meta Tags](https://metatags.io/) to prepare the Meta tags for social media share previews.
 - [ColorSpace](https://mycolor.space/?hex=%23CCE0C5&sub=1) to choose the color palettes.
 - [Design.com](https://www.design.com/) to design, generate and edit the logo.
+- [Animate.css](https://animate.style/#utilities) to add animation to website's content.
 - [Am I responsive](https://ui.dev/amiresponsive) to generate the mock ups.
-- [Stripe](https://stripe.com/gb) as an external provider to handle payments
+- [Stripe](https://stripe.com/gb) as an external provider to handle payments.
 - [Google Chrome](https://www.google.com/intl/en_ie/chrome/), [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/) and [Safari](https://www.apple.com/safari/), [Microsoft Edge](https://www.microsoft.com/en-us/edge) for testing on Windows 11.
 - [Safari](https://www.apple.com/safari/) on iOS and iPadOS 15.
 - [Google Chrome](https://www.google.com/intl/en_ie/chrome/) on Android 12.
