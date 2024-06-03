@@ -62,7 +62,7 @@
                     {% csrf_token %}
                     <textarea id="id_body" name="body" class="textarea form-control" rows="5" required></textarea>
                     <button id="submitButton" type="submit"
-                    class="btn btn-secondary mt-3">Publish</button>
+                    class="btn btn-secondary mt-3" aria-label="Publish">Publish</button>
                 </form>
             </div>
             <div class="modal-footer">
@@ -86,7 +86,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <a href="#" class="btn btn-primary" id="deleteConfirm">Delete</a>
+                <a href="#" class="btn btn-primary" id="deleteConfirm" aria-label="Delete">Delete</a>
             </div>
         </div>
     </div>
