@@ -47,6 +47,10 @@ class Basket(models.Model):
 
 
 class Favorite(models.Model):
+    """
+    Stores a single favorite entry related to :model:`auth.User`
+    and :model:`products.Product`.
+    """
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='favorited_by')
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='favorite_product')
     added_at = models.DateTimeField(auto_now_add=True)
