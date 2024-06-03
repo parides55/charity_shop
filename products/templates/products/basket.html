@@ -23,38 +23,53 @@
                     <tr>
                         <td>{{ item.product.title }}</td>
                         <td>{{ item.quantity }}</td>
-                        <td><i class="fa-solid fa-euro-sign"></i>{{ item.amount }}</td>
-                        <td><i class="fa-solid fa-euro-sign"></i>{% widthratio item.quantity 1 item.amount %}</td>
-                        <td><button type="submit" class="btn btn-danger btn-to-remove-item"
-                            data-basket_id='{{item.id}}'><i class="fa-solid fa-minus"></i></button></td>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" fill="currentColor" class="bi bi-currency-euro" viewBox="0 0 16 16">
+                                <path d="M4 9.42h1.063C5.4 12.323 7.317 14 10.34 14c.622 0 1.167-.068 1.659-.185v-1.3c-.484.119-1.045.17-1.659.17-2.1 0-3.455-1.198-3.775-3.264h4.017v-.928H6.497v-.936q-.002-.165.008-.329h4.078v-.927H6.618c.388-1.898 1.719-2.985 3.723-2.985.614 0 1.175.05 1.659.177V2.194A6.6 6.6 0 0 0 10.341 2c-2.928 0-4.82 1.569-5.244 4.3H4v.928h1.01v1.265H4v.928z"/>
+                            </svg> {{ item.amount }}
+                        </td>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" fill="currentColor" class="bi bi-currency-euro" viewBox="0 0 16 16">
+                                <path d="M4 9.42h1.063C5.4 12.323 7.317 14 10.34 14c.622 0 1.167-.068 1.659-.185v-1.3c-.484.119-1.045.17-1.659.17-2.1 0-3.455-1.198-3.775-3.264h4.017v-.928H6.497v-.936q-.002-.165.008-.329h4.078v-.927H6.618c.388-1.898 1.719-2.985 3.723-2.985.614 0 1.175.05 1.659.177V2.194A6.6 6.6 0 0 0 10.341 2c-2.928 0-4.82 1.569-5.244 4.3H4v.928h1.01v1.265H4v.928z"/>
+                            </svg> {% widthratio item.quantity 1 item.amount %}
+                        </td>
+                        <td><button type="submit" class="btn btn-danger btn-to-remove-item fs-6"
+                            data-basket_id='{{item.id}}' aria-label="Remove">Remove</button></td>
                     </tr>
                     {% endfor %}
                     <tr>
                         <td colspan="3" class="text-end"><strong>Total Amount</strong></td>
-                        <td><strong><i class="fa-solid fa-euro-sign"></i>{{ total }}</strong></td>
+                        <td>
+                            <strong>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" fill="currentColor" class="bi bi-currency-euro" viewBox="0 0 16 16">
+                                    <path d="M4 9.42h1.063C5.4 12.323 7.317 14 10.34 14c.622 0 1.167-.068 1.659-.185v-1.3c-.484.119-1.045.17-1.659.17-2.1 0-3.455-1.198-3.775-3.264h4.017v-.928H6.497v-.936q-.002-.165.008-.329h4.078v-.927H6.618c.388-1.898 1.719-2.985 3.723-2.985.614 0 1.175.05 1.659.177V2.194A6.6 6.6 0 0 0 10.341 2c-2.928 0-4.82 1.569-5.244 4.3H4v.928h1.01v1.265H4v.928z"/>
+                                </svg> {{ total }}
+                            </strong>
+                        </td>
                     </tr>
                 </tbody>
             </table>
-            <span><a href="{% url 'products' %}" class="btn btn-secondary">Continue Shopping</a></span>
-            <span><a href="https://buy.stripe.com/test_00gbLU6c58tsf84aEE" class="btn btn-success">Proceed to Checkout</a></span>
+            <span><a href="{% url 'products' %}" class="btn btn-secondary" aria-label="Continue Shoping">Continue Shopping</a></span>
+            <span><a href="https://buy.stripe.com/test_00gbLU6c58tsf84aEE" class="btn btn-success" aria-label="Proceed to checkout">Proceed to Checkout</a></span>
         </div>
     </div>
 </div>
 
+<!-- Modal to confirm removal of product-->
 {% for item in items %}
 <div class="modal fade" id="removalModal" tabindex="-1" aria-labelledby="removalModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">{{item.product_title}}</h5>
+                <p class="modal-title fs-5">{{item.product_title}}</p>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <p>Please confirm you want to remove the above item. </p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <a href="#" class="btn btn-primary" id="removeConfirm">Remove</a>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                <a href="#" class="btn btn-primary" id="removeConfirm" aria-label="Remove">Remove</a>
             </div>
         </div>
     </div>

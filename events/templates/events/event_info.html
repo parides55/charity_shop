@@ -1,13 +1,10 @@
 {% extends "base.html" %}
-
 {% block content %}
-
 {% load static %}
 {% load crispy_forms_tags %}
 
-
 <div class="container">
-    <div class="article-title">{{event.title}}</div>
+    <div class="article-title"><i>{{event.title}}</i></div>
     <div class="hero-image">
         {% if "placeholder" in event.event_image.url %}
                 <img class="img-fluid" src="{% static 'images/default.jpg' %}"
@@ -16,18 +13,23 @@
                 <img class="img-fluid" src=" {{ event.event_image.url }}"
                     alt="{{ event.title }}">
                 {% endif %}
-        <div class="hero-image-caption"></div>
     </div>
     <div class="article-content my-4">
-        <p>{{event.content | safe}}</p>
+        <article>{{event.content | safe}}</article>
     </div>
-    <div class="comments-section mt-4 p-4 bg-light">
-        <h3>Reviews</h3>
+    <div class="comments-section m-4 p-4 bg-light">
+        <p class="fs-3 mb-4">Reviews</p>
         {% if user.is_authenticated %}
-        <a href="#" id="write-review" class="text-decoration-none"><i class="fa-solid fa-plus"></i> Review</a>
+        <a href="#" id="write-review" class="text-decoration-none" aria-label="click to add review">
+            <span class="p-2 bg-dark-subtle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
+                </svg> Review
+            </span>
+        </a>
         </form>
         {% else %}
-        <p>Please <a href="{% url 'account_login' %}">login</a> to leave a review.</p>
+        <p>Please <a href="{% url 'account_login' %}" aria-label="login">login</a> to leave a review.</p>
         {% endif %}
         {% for review in reviews %}
         <div class="posted-comments mt-4">
@@ -37,8 +39,8 @@
                     <p id="review{{review.id}}">{{review.body | safe}}</p>
                 </span>
                 {% if user.is_authenticated and review.author == request.user %}
-                <span><button class="btn btn-light edit-comment-button" data-review_id="{{ review.id }}">Edit</button></span>
-                <span><button class="btn btn-light delete-comment-button" data-review_id="{{ review.id }}">Delete</button></span>
+                <span><button class="btn btn-light edit-comment-button" data-review_id="{{ review.id }}" aria-label="Edit">Edit</button></span>
+                <span><button class="btn btn-light delete-comment-button" data-review_id="{{ review.id }}" aria-label="Delete">Delete</button></span>
                 {% endif %}
                 <hr>
             </div>
@@ -46,7 +48,7 @@
     </div>
 </div>
 
-<!--Edit Modal -->
+<!--Modal for editing or adding comment-->
 <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -71,7 +73,7 @@
     </div>
 </div>
 
-<!--Delete Modal -->
+<!--Modal to confirm deletion -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
