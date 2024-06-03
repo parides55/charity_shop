@@ -2,20 +2,21 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib import messages
 from django.views import generic
 from django.http import HttpResponseRedirect 
+from django.contrib.auth.decorators import login_required
 from .models import Product, Basket, Favorite
 from .forms import BasketForm
 
 # Create your views here.
 
 class Products(generic.ListView):
-    queryset = Product.objects.all()
+    queryset = Product.objects.filter(status=1)
     template_name = "products/products.html"
 
 def view_product(request, slug):
 
-    queryset = Product.objects.all()
+    queryset = Product.objects.filter(status=1)
     product = get_object_or_404(queryset, slug=slug)
-    basket = product.product.all()
+    basket_items = Basket.objects.filter(product=product)
     
     if request.method == 'POST':
         basket_form = BasketForm(data=request.POST)
@@ -26,6 +27,7 @@ def view_product(request, slug):
             order.amount = product.price
             order.save()
             messages.success(request, 'Product added to basket')
+            return redirect('basket')
         else:
             messages.error(request, 'Error adding product to basket')
 
@@ -34,13 +36,14 @@ def view_product(request, slug):
         request,
         'products/view_product.html',
         {'product': product,
-        'basket': basket,
-        'basket_from': basket_form,},
+        'basket_items': basket_items,
+        'basket_form': basket_form,},
         )
 
 def home(request):
     return render(request, 'products/index.html',)
 
+@login_required
 def basket(request):
 
     items = Basket.objects.filter(user=request.user)
@@ -48,7 +51,7 @@ def basket(request):
 
     return render(request, 'products/basket.html', {'items': items, 'total': total})
 
-
+@login_required
 def remove_item(request, basket_id):
 
     basket_item = get_object_or_404(Basket, id=basket_id, user=request.user)
@@ -64,6 +67,7 @@ def after_payment(request):
         'products/after_payment.html',
     )
 
+@login_required
 def add_to_favorites(request, product_id):
 
     product = get_object_or_404(Product, id=product_id)
@@ -76,6 +80,7 @@ def add_to_favorites(request, product_id):
     
     return redirect('products')
 
+@login_required
 def favorites(request):
 
     favorites = Favorite.objects.filter(user=request.user)
@@ -86,6 +91,7 @@ def favorites(request):
         {'favorites': favorites,},
         )
 
+@login_required
 def remove_favorite(request, favorite_id):
 
     favorite = get_object_or_404(Favorite, id=favorite_id, user=request.user)
