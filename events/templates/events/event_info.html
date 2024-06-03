@@ -7,12 +7,12 @@
     <div class="article-title"><i>{{event.title}}</i></div>
     <div class="hero-image">
         {% if "placeholder" in event.event_image.url %}
-                <img class="img-fluid" src="{% static 'images/default.jpg' %}"
-                    alt="placeholder image">
-                {% else %}
-                <img class="img-fluid" src=" {{ event.event_image.url }}"
-                    alt="{{ event.title }}">
-                {% endif %}
+            <img class="img-fluid" src="{% static 'images/default.jpg' %}"
+                alt="placeholder image">
+            {% else %}
+            <img class="img-fluid" src=" {{ event.event_image.url }}"
+                alt="{{ event.title }}">
+        {% endif %}
     </div>
     <div class="article-content my-4">
         <article>{{event.content | safe}}</article>
@@ -39,8 +39,8 @@
                     <p id="review{{review.id}}">{{review.body | safe}}</p>
                 </span>
                 {% if user.is_authenticated and review.author == request.user %}
-                <span><button class="btn btn-light edit-comment-button" data-review_id="{{ review.id }}" aria-label="Edit">Edit</button></span>
-                <span><button class="btn btn-light delete-comment-button" data-review_id="{{ review.id }}" aria-label="Delete">Delete</button></span>
+                    <span><button class="btn btn-light edit-comment-button" data-review_id="{{ review.id }}" aria-label="Edit">Edit</button></span>
+                    <span><button class="btn btn-light delete-comment-button" data-review_id="{{ review.id }}" aria-label="Delete">Delete</button></span>
                 {% endif %}
                 <hr>
             </div>
