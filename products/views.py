@@ -62,6 +62,9 @@ def remove_item(request, basket_id):
 
 def after_payment(request):
 
+    basket_items = Basket.objects.filter(user=request.user)
+    basket_items.delete()
+    
     return render(
         request,
         'products/after_payment.html',
