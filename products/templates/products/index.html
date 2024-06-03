@@ -4,18 +4,19 @@
 
 {% load static %}
 
-<div class="container-fluid home-div">
+<div class="container-fluid home-div mt-5">
     <div class="row home-row text-center">
         <div class="col-lg-6 col-md-12">
             <img src="{% static 'images/icononly_transparent_nobuffer.png' %}" class="animate__animated animate__fadeInUp animate__delay-1s" width="200" height="200" alt="Charity Treasures Logo">
-            <h2 class="animate__animated animate__fadeInUp animate__delay-2s">
+            <h2 class="my-2 animate__animated animate__fadeInUp animate__delay-2s">
                 Every Purchase, A Heartbeat of Hope!
             </h2>
             <h3>
                 <a class="{% if user.is_authenticated %}d-none{% endif %} text-decoration-none animate__animated animate__fadeInUp animate__delay-2s" href="{% url 'account_signup' %}">Sign up</a>
                 <span class="{% if user.is_authenticated %}d-none{% endif %} animate__animated animate__fadeInUp animate__delay-2s"> and </span> 
                 <span class="animate__animated animate__fadeInUp animate__delay-2s"> Donate today to help</span> 
-                <a class="text-decoration-none animate__animated animate__fadeInUp animate__delay-2s" href="{% url 'our_story' %}">our cause</a></h3>
+                <a class="text-decoration-none animate__animated animate__fadeInUp animate__delay-2s" href="{% url 'our_story' %}">our cause</a>
+            </h3>
         </div>
     </div>
 </div>
