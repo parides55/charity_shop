@@ -62,7 +62,9 @@
       </div>
         <div class="container-fluid">
           <a class="navbar-brand ps-3" href="{% url 'home' %}"><img src="{% static 'images/icononly_transparent_nobuffer.png' %}" alt="Logo" width="45" height="39" aria-label="The logo is a home button"></a>
-          <img class="d-inline d-md-none" src="{% static 'images/textLogo_NoBuffer.png' %}" width="150"  alt="Charity Treasures">
+          <a class="d-inline d-md-none" href="{% url 'home' %}">
+            <img src="{% static 'images/textLogo_NoBuffer.png' %}" width="150" alt="Charity Treasures">
+          </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
