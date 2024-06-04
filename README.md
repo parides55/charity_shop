@@ -507,7 +507,7 @@ Result: Pass ✅
 <details>
 <summary>JSHint validation screenshot - reviews.js</summary>
 
-![reviews.js]()
+![reviews.js](https://github.com/parides55/charity_shop/blob/main/Readme_docs/validations/review_js.png)
 
 </details>
 

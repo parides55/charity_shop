@@ -6,7 +6,6 @@ const reviewModal = new bootstrap.Modal(document.getElementById("reviewModal"));
 const editCommentButtons = document.getElementsByClassName("edit-comment-button");
 const reviewText = document.getElementById("id_body_modal");
 const reviewForm = document.getElementById("reviewForm");
-const editConfirm = document.getElementById("editConfirm");
 
 //Variables for delete 
 const deleteCommentButtons = document.getElementsByClassName("delete-comment-button");
