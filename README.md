@@ -277,6 +277,12 @@ CVV number: Any 3 digit number
 
 I tested for responsiveness on many different sized view ports and using different hardware (Monitors, Laptops, Phones).
 
+![Mobile Device](https://github.com/parides55/charity_shop/blob/main/Readme_docs/responsive_screnshots/mobile_home.png)
+![Mobile Device](https://github.com/parides55/charity_shop/blob/main/Readme_docs/responsive_screnshots/mobile_product.png)
+
+![iPad device](https://github.com/parides55/charity_shop/blob/main/Readme_docs/responsive_screnshots/ipad_events.png)
+![iPad device](https://github.com/parides55/charity_shop/blob/main/Readme_docs/responsive_screnshots/ipad_view_events.png)
+
 I used Google Chrome Dev tools during development to test many different viewport sizes at once.
 
 ### Performance Testing
