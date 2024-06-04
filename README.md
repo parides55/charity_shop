@@ -178,9 +178,9 @@ CVV number: Any 3 digit number
 - [Animate.css](https://animate.style/#utilities) to add animation to website's content.
 - [Am I responsive](https://ui.dev/amiresponsive) to generate the mock ups.
 - [Stripe](https://stripe.com/gb) as an external provider to handle payments.
-- [Google Chrome](https://www.google.com/intl/en_ie/chrome/), [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/) and [Safari](https://www.apple.com/safari/), [Microsoft Edge](https://www.microsoft.com/en-us/edge) for testing on Windows 11.
-- [Safari](https://www.apple.com/safari/) on iOS and iPadOS 15.
-- [Google Chrome](https://www.google.com/intl/en_ie/chrome/) on Android 12.
+- [Google Chrome](https://www.google.com/intl/en_ie/chrome/), [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/) and [Microsoft Edge](https://www.microsoft.com/en-us/edge) for testing on Windows 11.
+- [Safari](https://www.apple.com/safari/) on iOS and iPadOS 17 and iPhoneOS 15.
+- [Google Chrome](https://www.google.com/intl/en_ie/chrome/) on Android 14.
 
 ## Testing
 
