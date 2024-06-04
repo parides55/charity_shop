@@ -79,7 +79,7 @@ def write_review(request, slug):
                 request, messages.SUCCESS,
                 'Review submitted successfully and awaiting approval.'
             )
-            return redirect('event_info', args=[slug])
+            return redirect('event_info', slug=slug)
         else:
             messages.add_message(
                 request, messages.ERROR,
@@ -122,8 +122,9 @@ def edit_review(request, slug, review_id):
             review.save()
             messages.add_message(
                 request, messages.SUCCESS,
-                'Successful edit of review and after approval to be displayed.'
+                'Successful edit of review and after approval will be displayed.'
                 )
+            return redirect('event_info', slug=slug)
         else:
             messages.add_message(
                 request, messages.ERROR,
