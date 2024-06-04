@@ -411,7 +411,7 @@ Performed using Google Lighthouse in Google Chrome
 
 <summary>Our products</summary>
 
-![Our products]()
+![Our products](https://github.com/parides55/charity_shop/blob/main/Readme_docs/LightHouse/mobile_our_products_LH.png)
 
 </details>
 
@@ -419,7 +419,7 @@ Performed using Google Lighthouse in Google Chrome
 
 <summary>View product</summary>
 
-![View product]()
+![View product](https://github.com/parides55/charity_shop/blob/main/Readme_docs/LightHouse/mobile_our_products_LH.png)
 
 </details>
 
@@ -427,7 +427,7 @@ Performed using Google Lighthouse in Google Chrome
 
 <summary>Favorites</summary>
 
-![Favorites]()
+![Favorites](https://github.com/parides55/charity_shop/blob/3f3255dd07827fbe314a6f4aa67f22a136fe8d85/Readme_docs/LightHouse/mobile_favorites_LH.png)
 
 </details>
 
@@ -435,7 +435,7 @@ Performed using Google Lighthouse in Google Chrome
 
 <summary>Basket</summary>
 
-![Basket]()
+![Basket](https://github.com/parides55/charity_shop/blob/3f3255dd07827fbe314a6f4aa67f22a136fe8d85/Readme_docs/LightHouse/mobile_basket_LH.png)
 
 </details>
 
@@ -443,7 +443,7 @@ Performed using Google Lighthouse in Google Chrome
 
 <summary>Contact us</summary>
 
-![Contact us]()
+![Contact us](https://github.com/parides55/charity_shop/blob/3f3255dd07827fbe314a6f4aa67f22a136fe8d85/Readme_docs/LightHouse/mobile_contact_us_LH.png)
 
 </details>
 
