@@ -107,7 +107,7 @@ I, also, ensured that every element still met AAA level in the [Web Content Acce
 
 ## Database Design
 
-The Database Design can be separated into the Admin's databases and User's databases.
+![Database Design](https://github.com/parides55/charity_shop/blob/main/Readme_docs/Charity_Shop_Database.drawio.png)
 
 ## Features
 
