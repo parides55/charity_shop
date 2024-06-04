@@ -208,7 +208,7 @@ When the view button is clicked the user is taken to the event's details. Once t
 
 ### Contact Us
 
-This page contains a form which when a user or a visitor of the website can complete and send a message to the admin of the website. Once form is submitted a confirmation message is displayed on the top of the page indicating successful or not submition.
+This page contains a form which when a user or a visitor of the website can complete and send a message to the admin of the website. Once form is submitted a confirmation message is displayed on the top of the page indicating successful or not submission.
 
 <details>
 <summary>Contact Us</summary>
@@ -264,6 +264,7 @@ CVV number: Any 3 digit number
 - [Design.com](https://www.design.com/) to design, generate and edit the logo.
 - [Animate.css](https://animate.style/#utilities) to add animation to website's content.
 - [Stripe](https://stripe.com/gb) as an external provider to handle payments.
+- [TinyPNG](https://tinypng.com/) to optimize images for the site.
 - [Google Chrome](https://www.google.com/intl/en_ie/chrome/), [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/) and [Microsoft Edge](https://www.microsoft.com/en-us/edge) for testing on Windows 11.
 - [Safari](https://www.apple.com/safari/) on iOS and iPadOS 17 and iPhoneOS 15.
 - [Google Chrome](https://www.google.com/intl/en_ie/chrome/) on Android 14.
@@ -454,6 +455,8 @@ Performed using Google Lighthouse in Google Chrome
 ![WAVE Evaluation Results](https://github.com/parides55/charity_shop/blob/main/Readme_docs/validations/WAVE_evaluation_tool.png)
 
 </details>
+
+Although, all images were optimized to ensure better website performance, the mobile devices are lacking performance, especially when a content with a lot of images is loaded, like the Products page.
 
 ### User Story Testing
 
