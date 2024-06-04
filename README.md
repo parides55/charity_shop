@@ -273,6 +273,16 @@ CVV number: Any 3 digit number
 
 ### Browser Compatibility
 
+I tested the website on 3 different operating systems on four different types of hardware and didn't find any rendering bugs between the browsers tested.
+
+| Operating System       | Chrome | Firefox | Edge | Safari |
+|------------------------|--------|---------|------|--------|
+| Windows 11             | ✅     | ✅      | ✅   | ❌   |
+| Android 14             | ✅     | ✅      | ✅   | ❌   |
+| iOS & iPadOS 17        | ✅     | ✅      | ✅   | ✅   |
+
+❌ = couldn't test Safari on the above devises.
+
 ### Responsiveness
 
 I tested for responsiveness on many different sized view ports and using different hardware (Monitors, Laptops, Phones).
