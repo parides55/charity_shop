@@ -146,8 +146,8 @@ def add_to_favorites(request, product_id):
     """
 
     product = get_object_or_404(Product, id=product_id)
-    favorite, created =
-    Favorite.objects.get_or_create(user=request.user, product=product)
+    favorite, created = Favorite.objects.get_or_create(
+        user=request.user, product=product)
 
     if created:
         messages.success(
