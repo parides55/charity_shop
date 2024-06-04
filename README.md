@@ -459,61 +459,71 @@ Result: Pass ✅
 
 <details>
 <summary>PEP8 Online validation - our_story/admin.py</summary>
+
 ![our_story/admin.py](https://github.com/parides55/charity_shop/blob/main/Readme_docs/validations/our_story_admin.png)
 
 </details>
 
 <details>
 <summary>PEP8 Online validation - our_story/forms.py</summary>
-![our_story/forms.py]()
+
+![our_story/forms.py](https://github.com/parides55/charity_shop/blob/eb86f77a3e36c94e2a4942762f2b392cf4534488/Readme_docs/validations/our_story_forms.png)
 
 </details>
 
 <details>
 <summary>PEP8 Online validation - our_story/models</summary>
-![our_story/models]()
+
+![our_story/models](https://github.com/parides55/charity_shop/blob/eb86f77a3e36c94e2a4942762f2b392cf4534488/Readme_docs/validations/our_story_models.png)
 
 </details>
 
 <details>
 <summary>PEP8 Online validation - our_story/urls.py</summary>
-![our_story/urls.py]()
+
+![our_story/urls.py](https://github.com/parides55/charity_shop/blob/eb86f77a3e36c94e2a4942762f2b392cf4534488/Readme_docs/validations/our_story_urls.png)
 
 </details>
 
 <details>
 <summary>PEP8 Online validation - our_story/views.py</summary>
-![our_story/views.py]()
+
+![our_story/views.py](https://github.com/parides55/charity_shop/blob/eb86f77a3e36c94e2a4942762f2b392cf4534488/Readme_docs/validations/our_story_vies.png)
 
 </details>
 
 <details>
 <summary>PEP8 Online validation - events/admin.py</summary>
-![events/admin.py]()
+
+![events/admin.py](https://github.com/parides55/charity_shop/blob/eb86f77a3e36c94e2a4942762f2b392cf4534488/Readme_docs/validations/events_admin.png)
 
 </details>
 
 <details>
 <summary>PEP8 Online validation - events/forms.py</summary>
-![events/forms.py]()
+
+![events/forms.py](https://github.com/parides55/charity_shop/blob/eb86f77a3e36c94e2a4942762f2b392cf4534488/Readme_docs/validations/events_forms.png)
 
 </details>
 
 <details>
 <summary>PEP8 Online validation - events/models</summary>
-![events/models]()
+
+![events/models](https://github.com/parides55/charity_shop/blob/eb86f77a3e36c94e2a4942762f2b392cf4534488/Readme_docs/validations/events_models.png)
 
 </details>
 
 <details>
 <summary>PEP8 Online validation - events/urls.py</summary>
-![events/urls.py]()
+
+![events/urls.py](https://github.com/parides55/charity_shop/blob/eb86f77a3e36c94e2a4942762f2b392cf4534488/Readme_docs/validations/events_urls.png)
 
 </details>
 
 <details>
 <summary>PEP8 Online validation - events/views.py</summary>
-![events/views.py]()
+
+![events/views.py](https://github.com/parides55/charity_shop/blob/eb86f77a3e36c94e2a4942762f2b392cf4534488/Readme_docs/validations/events_views.png)
 
 </details>
 
