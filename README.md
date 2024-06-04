@@ -298,6 +298,154 @@ I used Google Chrome Dev tools during development to test many different viewpor
 
 Performed using Google Lighthouse in Google Chrome
 
+- Desktop
+
+<details>
+
+<summary>Home</summary>
+
+![Home](https://github.com/parides55/charity_shop/blob/main/Readme_docs/LightHouse/desktop_home_LH.png)
+
+</details>
+
+<details>
+
+<summary>Our story</summary>
+
+![Our Story](https://github.com/parides55/charity_shop/blob/main/Readme_docs/LightHouse/desktop_our_story_LH.png)
+
+</details>
+
+<details>
+
+<summary>Our events</summary>
+
+![Our events](https://github.com/parides55/charity_shop/blob/main/Readme_docs/LightHouse/desktop_event_LH.png)
+
+</details>
+
+<details>
+
+<summary>View events</summary>
+
+![View event](https://github.com/parides55/charity_shop/blob/main/Readme_docs/LightHouse/desktop_view_event_LH.png)
+
+</details>
+
+<details>
+
+<summary>Our products</summary>
+
+![Our products]()
+
+</details>
+
+<details>
+
+<summary>View product</summary>
+
+![View product](https://github.com/parides55/charity_shop/blob/main/Readme_docs/LightHouse/desktop_view_product_LH.png)
+
+</details>
+
+<details>
+
+<summary>Favorites</summary>
+
+![Favorites](https://github.com/parides55/charity_shop/blob/main/Readme_docs/LightHouse/desktop_favoritest_LH.png)
+
+</details>
+
+<details>
+
+<summary>Basket</summary>
+
+![Basket](https://github.com/parides55/charity_shop/blob/main/Readme_docs/LightHouse/desktop_basket_LH.png)
+
+</details>
+
+<details>
+
+<summary>Contact us</summary>
+
+![Contact us](https://github.com/parides55/charity_shop/blob/main/Readme_docs/LightHouse/desktop_contact_us_LH.png)
+
+</details>
+
+- Mobile
+
+<details>
+
+<summary>Home</summary>
+
+![Home](https://github.com/parides55/charity_shop/blob/main/Readme_docs/LightHouse/mobile_home_LH.png)
+
+</details>
+
+<details>
+
+<summary>Our story</summary>
+
+![Our Story](https://github.com/parides55/charity_shop/blob/main/Readme_docs/LightHouse/mobile_our_story_LH.png)
+
+</details>
+
+<details>
+
+<summary>Our events</summary>
+
+![Our events](https://github.com/parides55/charity_shop/blob/main/Readme_docs/LightHouse/mobile_event_LH.png)
+
+</details>
+
+<details>
+
+<summary>View events</summary>
+
+![View event](Readme_docs\LightHouse\mobile_view_event_LH.png)
+
+</details>
+
+<details>
+
+<summary>Our products</summary>
+
+![Our products]()
+
+</details>
+
+<details>
+
+<summary>View product</summary>
+
+![View product]()
+
+</details>
+
+<details>
+
+<summary>Favorites</summary>
+
+![Favorites]()
+
+</details>
+
+<details>
+
+<summary>Basket</summary>
+
+![Basket]()
+
+</details>
+
+<details>
+
+<summary>Contact us</summary>
+
+![Contact us]()
+
+</details>
+
 ### Accessibility Testing
 
 <details>
