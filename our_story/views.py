@@ -4,6 +4,7 @@ from django.contrib import messages
 from .models import OurStory, ContactUs
 from .forms import ContactUsForm
 
+
 # Create your views here.
 def our_story(request):
     """
@@ -25,6 +26,7 @@ def our_story(request):
         'our_story/our-story.html',
         {"our_story": our_story},
         )
+
 
 def contact_us(request):
     """
@@ -58,6 +60,7 @@ def contact_us(request):
         'our_story/contact-us.html',
         {"contact_us_form": contact_us_form},
         )
+
 
 def privacy(request):
     """

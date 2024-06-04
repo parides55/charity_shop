@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import OurStory, ContactUs
 from django_summernote.admin import SummernoteModelAdmin
 
+
 # Register your models here.
 @admin.register(OurStory)
 class OurStoryAdmin(SummernoteModelAdmin):

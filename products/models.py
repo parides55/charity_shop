@@ -5,6 +5,7 @@ from cloudinary.models import CloudinaryField
 STATUS = ((0, "Awaiting Approval"), (1, "Approved"))
 CONDITION = ((0, "New"), (1, "Used"), (2, "Refurbished"))
 
+
 # Create your models here.
 class Product(models.Model):
     """
@@ -12,7 +13,8 @@ class Product(models.Model):
     """
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='product_posts')
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='product_posts')
     product_image = CloudinaryField('image', default='placeholder')
     description = models.TextField()
     condition = models.IntegerField(choices=CONDITION, default=0)
@@ -31,10 +33,13 @@ class Product(models.Model):
 
 class Basket(models.Model):
     """
-    Stores a single basket entry related to :model:`auth.User` and :model:`products.Product`.
+    Stores a single basket entry related to :model:`auth.User`
+    and :model:`products.Product`.
     """
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='buyer')
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='product')
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='buyer')
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name='product')
     amount = models.DecimalField(max_digits=10, decimal_places=2)
     quantity = models.IntegerField(default=1)
     created_on = models.DateTimeField(auto_now_add=True)
@@ -51,8 +56,10 @@ class Favorite(models.Model):
     Stores a single favorite entry related to :model:`auth.User`
     and :model:`products.Product`.
     """
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='favorited_by')
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='favorite_product')
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='favorited_by')
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name='favorite_product')
     added_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

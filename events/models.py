@@ -4,6 +4,7 @@ from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
+
 # Create your models here.
 class Event(models.Model):
     """
@@ -28,7 +29,8 @@ class Event(models.Model):
 
 class Review(models.Model):
     """
-    Stores a single comment entry related to :model:`events.Event` and :model:`auth.User`.
+    Stores a single comment entry related
+    to :model:`events.Event` and :model:`auth.User`.
     """
     post = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='comments')
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='commenter')
