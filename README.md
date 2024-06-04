@@ -155,7 +155,7 @@ This is the first page that a user or a visitor will see. It contains in the mid
 This page contains the history of the organization and it explains the website's purpose. It has a picture of the creator and a paragraph text. This page is fully controlled from the admin panel, provided by Django, where the admin can update the page from.
 
 <details>
-<summary>Our Story/summary>
+<summary>Our Story</summary>
 
 ![Our Story](https://github.com/parides55/charity_shop/blob/main/Readme_docs/screenshots/desktop_our_story.png)
 
