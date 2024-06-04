@@ -59,11 +59,11 @@
 <body>
   <nav class="navbar navbar-expand-md" id="navbar-in-nav">
     <div class="container-fluid text-center d-none d-md-inline" id="title-div">
-      <a href="{% url 'home' %}"><h1><img src="{% static 'images/textLogo_NoBuffer.png' %}" width="250" alt="Charity Treasures"></h1></a>
+      <a href="{% url 'home' %}" aria-label="home"><h1><img src="{% static 'images/textLogo_NoBuffer.png' %}" width="250" alt="Charity Treasures"></h1></a>
     </div>
       <div class="container-fluid">
         <a class="navbar-brand ps-3" href="{% url 'home' %}"><img src="{% static 'images/icononly_transparent_nobuffer.png' %}" alt="The logo is a home button" width="45" height="39" aria-label="Logo"></a>
-        <a class="d-inline d-md-none" href="{% url 'home' %}">
+        <a class="d-inline d-md-none" href="{% url 'home' %}" aria-label="Home">
           <img src="{% static 'images/textLogo_NoBuffer.png' %}" width="150" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
