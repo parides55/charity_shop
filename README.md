@@ -1,5 +1,7 @@
 [**Charity Treasures**](https://charity-shop-pp4-2870c2ac8971.herokuapp.com/)
 
+![Home page](https://github.com/parides55/charity_shop/blob/main/Readme_docs/screenshots/desktop_home_signed_in.png)
+
 <details>
 <summary>Table of Contents</summary>
 
@@ -117,41 +119,114 @@ This website utilizes numerous features from an e-commerce website and a blog. A
 
 The navigation bar is shown in all pages and it provides an easy way to navigate throughout the whole website. On the left side the logo of the organization is shown and it is also a link to the home page. A link to the home page is the organization's name on the top which is displayed continuously in all displays. On the right side the user icons are found which they are only shown if the user is authenticated, otherwise just a login icon is shown. Through the user icons, the users can navigate to their favorite page, where their favorite products are stored, to the their basket so they can proceed to check out or to remove the selected products and also to log out.
 
+<details>
+<summary>Navigation Bar</summary>
+
+![Navigation Bar](https://github.com/parides55/charity_shop/blob/main/Readme_docs/screenshots/desktop_navigation_bar.png)
+1[User icons](https://github.com/parides55/charity_shop/blob/main/Readme_docs/screenshots/desktop_user_icons.png)
+
+</details>
+
 ### Footer
 
 The footer is shown on all pages and it's purpose is to provide a quick and easy access to the this repository and to the privacy policy of the organization. Also, other social media icons can be used in the future, but at this time the webpage does not have any other media.
+
+<details>
+<summary>Footer</summary>
+
+![Footer](https://github.com/parides55/charity_shop/blob/main/Readme_docs/screenshots/desktop_footer.png)
+
+</details>
 
 ### Home Page
 
 This is the first page that a user or a visitor will see. It contains in the middle the logo of the organization with and inviting and informative message to the user/visitor. If the user is not authenticated the message includes a sing up link to invite the visitor to register. If it is a returning user the sign up link is not shown and the user is greeted on the top right corner with its username. This feature is displayed on all pages.
 
+<details>
+<summary>Home page - signed out</summary>
+
+![Home page signed out](https://github.com/parides55/charity_shop/blob/main/Readme_docs/screenshots/desktop_home.png)
+![Home page signed in](https://github.com/parides55/charity_shop/blob/main/Readme_docs/screenshots/desktop_home_signed_in.png)
+
+</details>
+
 ### Our Story
 
 This page contains the history of the organization and it explains the website's purpose. It has a picture of the creator and a paragraph text. This page is fully controlled from the admin panel, provided by Django, where the admin can update the page from.
+
+<details>
+<summary>Our Story/summary>
+
+![Our Story](https://github.com/parides55/charity_shop/blob/main/Readme_docs/screenshots/desktop_our_story.png)
+
+</details>
 
 ### Our products
 
 This is one of the two main pages of the website where all the products are advertised. The products are displayed on cards and each card shows the products image, its title and price, a button to View the product and a button to add the product to the favorites. When the 'Heart' button is clicked a confirmation message is displayed on the top of the page indicating successful or not addition.
 
+<details>
+<summary>Our products</summary>
+
+![Our products](https://github.com/parides55/charity_shop/blob/main/Readme_docs/screenshots/desktop_products.png)
+
+</details>
+
 #### View Product
 
 When the 'View' button is clicked on a product the user is taken on a page to view product's details and add it to basket in order to buy it. Also, there is an option to add the product to the user's favorites. When the 'Add to basket' or the 'Heart' button is clicked a confirmation message is displayed on the top of the page indicating successful or not action. Also, the 'Add to basket' button will redirect the user to their basket.
+
+<details>
+<summary>View Product</summary>
+
+![View Product](https://github.com/parides55/charity_shop/blob/main/Readme_docs/screenshots/desktop_view_products.png)
+
+</details>
 
 ### Our events
 
 This is the second main page of the website where charity events are advertise. The events are displayed on cards and on each card id shown the image of the event, the title of the event and a small description of the event. At the bottom a 'View' button, when clicked will take the user to see the event's details.
 
+<details>
+<summary>Our events</summary>
+
+![Events](https://github.com/parides55/charity_shop/blob/main/Readme_docs/screenshots/desktop_evenst.png)
+
+</details>
+
 #### View event
 
 When the view button is clicked the user is taken to the event's details. Once the page opens, the title of the event and a big hero image is displayed. Bellow the image a text describes the event and below it there's a review section. In the review section, provided the user is authenticated, the user can add a review/comment which will be displayed once it's been approved by the admin. Also, the review can be edited or deleted. The user cannot edit or delete others users's reviews.900
+
+<details>
+<summary>View event</summary>
+
+![View event - hero iame](https://github.com/parides55/charity_shop/blob/main/Readme_docs/screenshots/desktop_view_evenst_1.png)
+![View event - review](https://github.com/parides55/charity_shop/blob/main/Readme_docs/screenshots/desktop_view_evenst_2.png)
+
+</details>
 
 ### Contact Us
 
 This page contains a form which when a user or a visitor of the website can complete and send a message to the admin of the website. Once form is submitted a confirmation message is displayed on the top of the page indicating successful or not submition.
 
+<details>
+<summary>Contact Us</summary>
+
+![Contact Us](https://github.com/parides55/charity_shop/blob/main/Readme_docs/screenshots/desktop_contact_us.png)
+
+</details>
+
 ### Favorites
 
 In this page the user can view their selected products. The products are displayed on cards which they contain a 'View' button, to take the user to view product's details and add it to basket, and a 'Remove' button, which deletes the product form the user's favorites. When the 'Remove' button is clicked a confirmation message is displayed on the top of the page indicating successful or not removal.
+
+<details>
+<summary>Favorites</summary>
+
+![Favorites](https://github.com/parides55/charity_shop/blob/main/Readme_docs/screenshots/desktop_favorites.png)
+
+</details>
 
 ### Basket
 
@@ -162,6 +237,14 @@ Because this website is not registered yet with any authorities as an approved c
 Card Number : 4242 4242 4242 4242
 Expiry date: Any future date
 CVV number: Any 3 digit number
+
+<details>
+<summary>Basket</summary>
+
+![Basket](https://github.com/parides55/charity_shop/blob/main/Readme_docs/screenshots/desktop_basket.png)
+![After Payment](https://github.com/parides55/charity_shop/blob/main/Readme_docs/screenshots/desktop_after_payment.png)
+
+</details>
 
 ## Technologies used
 
@@ -388,6 +471,15 @@ Result: Pass ✅
 ![W3C CSS Validation](Readme_docs/validations/CSS_valitaion.png)
 
 </details>
+
+<p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+    </a>
+</p>
+     
 
 #### JavaScript Validation
 
