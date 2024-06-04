@@ -192,15 +192,22 @@ CVV number: Any 3 digit number
 
 ### Responsiveness
 
-- screenshots from dev tools
+I tested for responsiveness on many different sized view ports and using different hardware (Monitors, Laptops, Phones).
+
+I used Google Chrome Dev tools during development to test many different viewport sizes at once.
 
 ### Performance Testing
 
-- LightHouse report
+Performed using Google Lighthouse in Google Chrome
 
 ### Accessibility Testing
 
-- WCAG evaluation tool
+<details>
+<summary>WAVE Web Accessibility Evaluation Tool Results</summary>
+
+![WAVE Evaluation Results](https://github.com/parides55/charity_shop/blob/main/Readme_docs/validations/WAVE_evaluation_tool.png)
+
+</details>
 
 ### User Story Testing
 
