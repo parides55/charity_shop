@@ -123,7 +123,7 @@ The navigation bar is shown in all pages and it provides an easy way to navigate
 <summary>Navigation Bar</summary>
 
 ![Navigation Bar](https://github.com/parides55/charity_shop/blob/main/Readme_docs/screenshots/desktop_navigation_bar.png)
-1[User icons](https://github.com/parides55/charity_shop/blob/main/Readme_docs/screenshots/desktop_user_icons.png)
+![User icons](https://github.com/parides55/charity_shop/blob/main/Readme_docs/screenshots/desktop_user_icons.png)
 
 </details>
 
