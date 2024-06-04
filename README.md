@@ -567,8 +567,18 @@ To deploy to Heroku, follow these steps:
 
 ## Credits
 
+The biggest credits need to go to my wife Maria, who actually took all of the photos of the products and create the description of all of them and actively supported me throughout this project. Also, she wrote the content of the OUR STORY page. 
+
 ### Content
+
+- [ Code-Institute-Org/gitpod-full-p3](https://github.com/Code-Institute-Org/gitpod-full-p3) template was used to create this repo.
+- Events were taken from Google search
+- A lot of reference was taken from the [Developing with Django](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSD101_WTS+2/courseware/31f4d0db719b4ae38601295fa2151b5c/376093d8bf5a4b2abd2e47bdf47b82bf/) code of [Code of Institute](https://codeinstitute.net/global/) project to performed CRUD functionality and establish the models.
 
 ### Media
 
+- [Bootstrap Icons](https://icons.getbootstrap.com/) were used extensively in the project
+
 ### Acknowledgements
+
+- Thanks to my mentor for his guidance regarding the structure of the models and the successful perfomrance of the basket page.
