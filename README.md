@@ -337,7 +337,7 @@ Performed using Google Lighthouse in Google Chrome
 
 <summary>Our products</summary>
 
-![Our products]()
+![Our products](https://github.com/parides55/charity_shop/blob/84f15e1c24c02635324bd81b3c71ef092af8d9cf/Readme_docs/LightHouse/desktop_our_products_LH.png)
 
 </details>
 
