@@ -30,6 +30,10 @@
   - [Accessibility Testing](#accessibility-testing)
   - [User Story Testing](#user-story-testing)
   - [Code Validation](#code-validation)
+    - [HTML Validation](#html-validation)
+    - [CSS validation](#css-validation)
+    - [JavaScript Validation](#javascript-validation)
+    - [Python Validation](#python-validation)
 - [Deployment](#deployment)
 - [Credits](#credits)
   - [Content](#content)
@@ -346,6 +350,172 @@ Result: Pass ✅
 </details>
 
 ### Code Validation
+
+#### HTML Validation
+
+<details>
+<summary>[W3 HTML Validation](https://validator.w3.org/nu/)</summary>
+
+| Page                | URL                        | Results                        |
+|---------------------|----------------------------|--------------------------------|
+| basket.html         | basket/                    | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-shop-pp4-2870c2ac8971.herokuapp.com%2Fbasket%2F#l62c22)      |
+| favorites.html      | favorites/                 | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-shop-pp4-2870c2ac8971.herokuapp.com%2Ffavorites%2F#l62c22)      |
+| index.html          | ''                         | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-shop-pp4-2870c2ac8971.herokuapp.com%2F#l62c22)      |
+| products.html       | products/                  | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-shop-pp4-2870c2ac8971.herokuapp.com%2Fproducts%2F#l62c22)      |
+| view_product.html   | slug:slug/view_product/    | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-shop-pp4-2870c2ac8971.herokuapp.com%2Fpiano-toy-red%2Fview_product%2F#l62c22)      |
+| contact_us.html     | our-story/contact-us/      | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-shop-pp4-2870c2ac8971.herokuapp.com%2Four-story%2Fcontact-us%2F#l189c109)      |
+| our_story.html      | our-story/                 | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-shop-pp4-2870c2ac8971.herokuapp.com%2Four-story%2F)      |
+| privacy.html        | /our-story/privacy/        | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-shop-pp4-2870c2ac8971.herokuapp.com%2Four-story%2Fprivacy%2F#l189c109)      |
+| events.html         | events/                    | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-shop-pp4-2870c2ac8971.herokuapp.com%2Fevents%2F#l62c22)      |
+| event_info.html     | slug:slug/                 | [No errors or warnings]()      |
+| logout.html         | accounts/logout/           | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-shop-pp4-2870c2ac8971.herokuapp.com%2Faccounts%2Flogout%2F#l62c22)      |
+| login.html          | accounts/login/            | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-shop-pp4-2870c2ac8971.herokuapp.com%2Faccounts%2Flogin%2F#l62c22)      |
+
+</details>
+
+#### CSS validation
+
+<details>
+<summary>W3C CSS Validation</summary>
+
+![W3C CSS Validation](Readme_docs/validations/CSS_valitaion.png)
+
+</details>
+
+#### JavaScript Validation
+
+<details>
+
+<summary>JSHint validation screenshot - basket.js</summary>
+
+![basket.js](https://github.com/parides55/charity_shop/blob/main/Readme_docs/validations/basket_js.png))
+
+</details>
+
+<details>
+<summary>JSHint validation screenshot - favorites.js</summary>
+
+![favorites.js](https://github.com/parides55/charity_shop/blob/main/Readme_docs/validations/favorites_js.png)
+
+</details>
+
+<details>
+<summary>JSHint validation screenshot - reviews.js</summary>
+
+![reviews.js]()
+
+</details>
+
+#### Python Validation
+
+<details>
+<summary>PEP8 Online validation - charity_shop/settings.py</summary>
+
+![settings.py](https://github.com/parides55/charity_shop/blob/main/Readme_docs/validations/settings_py.png)
+
+</details>
+
+<details>
+<summary>PEP8 Online validation - charity_shop/urls.py</summary>
+
+![charity_shop/urls.py](https://github.com/parides55/charity_shop/blob/main/Readme_docs/validations/charity_shop_urls_py.png)
+
+</details>
+
+<details>
+<summary>PEP8 Online validation - products/admin.py</summary>
+
+![products/admin.py](https://github.com/parides55/charity_shop/blob/main/Readme_docs/validations/products_admin.png)
+
+</details>
+
+<details>
+<summary>PEP8 Online validation - products/forms.py</summary>
+
+![products/forms.py](https://github.com/parides55/charity_shop/blob/main/Readme_docs/validations/products_forms.png)
+
+</details>
+
+<details>
+<summary>PEP8 Online validation - products/models</summary>
+
+![products/models](https://github.com/parides55/charity_shop/blob/main/Readme_docs/validations/products_models.png)
+
+</details>
+
+<details>
+<summary>PEP8 Online validation - products/urls.py</summary>
+
+![products/urls.py](https://github.com/parides55/charity_shop/blob/main/Readme_docs/validations/products_urls.png)
+
+</details>
+
+<details>
+<summary>PEP8 Online validation - products/views.py</summary>
+
+![products/views.py](https://github.com/parides55/charity_shop/blob/main/Readme_docs/validations/products_views.png)
+
+</details>
+
+<details>
+<summary>PEP8 Online validation - our_story/admin.py</summary>
+![our_story/admin.py](https://github.com/parides55/charity_shop/blob/main/Readme_docs/validations/our_story_admin.png)
+
+</details>
+
+<details>
+<summary>PEP8 Online validation - our_story/forms.py</summary>
+![our_story/forms.py]()
+
+</details>
+
+<details>
+<summary>PEP8 Online validation - our_story/models</summary>
+![our_story/models]()
+
+</details>
+
+<details>
+<summary>PEP8 Online validation - our_story/urls.py</summary>
+![our_story/urls.py]()
+
+</details>
+
+<details>
+<summary>PEP8 Online validation - our_story/views.py</summary>
+![our_story/views.py]()
+
+</details>
+
+<details>
+<summary>PEP8 Online validation - events/admin.py</summary>
+![events/admin.py]()
+
+</details>
+
+<details>
+<summary>PEP8 Online validation - events/forms.py</summary>
+![events/forms.py]()
+
+</details>
+
+<details>
+<summary>PEP8 Online validation - events/models</summary>
+![events/models]()
+
+</details>
+
+<details>
+<summary>PEP8 Online validation - events/urls.py</summary>
+![events/urls.py]()
+
+</details>
+
+<details>
+<summary>PEP8 Online validation - events/views.py</summary>
+![events/views.py]()
+
+</details>
 
 ## Deployment
 
