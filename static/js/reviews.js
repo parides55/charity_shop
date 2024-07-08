@@ -20,7 +20,6 @@ writeReviewLink.addEventListener('click', () => {
 // To edit reviews
 for (let b of editCommentButtons) {
     b.addEventListener('click', (e) => {
-        console.log('edit button clicked');
         let reviewId = e.target.getAttribute('data-review_id');
         let reviewContent = document.getElementById(`${reviewId}`).innerText;
         reviewText.value = reviewContent;
