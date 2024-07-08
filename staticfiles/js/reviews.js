@@ -4,9 +4,8 @@ const reviewModal = new bootstrap.Modal(document.getElementById("reviewModal"));
 
 //Variables for edit
 const editCommentButtons = document.getElementsByClassName("edit-comment-button");
-const reviewText = document.getElementById("id-body");
+const reviewText = document.getElementById("id_body_modal");
 const reviewForm = document.getElementById("reviewForm");
-const editConfirm = document.getElementById("editConfirm");
 
 //Variables for delete 
 const deleteCommentButtons = document.getElementsByClassName("delete-comment-button");
@@ -18,13 +17,12 @@ writeReviewLink.addEventListener('click', () => {
     reviewForm.setAttribute("action", "write_review/");
     reviewModal.show();
 });
-
 // To edit reviews
-for (let button of editCommentButtons) {
-    button.addEventListener('click', (e) => {
+for (let b of editCommentButtons) {
+    b.addEventListener('click', (e) => {
         let reviewId = e.target.getAttribute('data-review_id');
-        let reviewContent = document.getElementById(`review${reviewId}`).innerText;
-        // reviewText.value = reviewContent;
+        let reviewContent = document.getElementById(`${reviewId}`).innerText;
+        reviewText.value = reviewContent;
         reviewForm.setAttribute("action", `edit_review/${reviewId}/`);
         reviewModal.show();
     });
