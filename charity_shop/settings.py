@@ -80,6 +80,9 @@ MIDDLEWARE = [
     'allauth.account.middleware.AccountMiddleware',
 ]
 
+# Add the following line to disable Whitenoise caching
+WHITENOISE_AUTOREFRESH = True
+
 ROOT_URLCONF = 'charity_shop.urls'
 
 TEMPLATES = [
