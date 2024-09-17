@@ -33,8 +33,9 @@
                             <p class="card-text"><i class="fa-solid fa-euro-sign"></i> {{product.price}}</p>
                             {% if user.is_authenticated %}
                                 <form id=basket_form method='post'>
-                                    {{ basket_form | crispy }}
                                     {% csrf_token %}
+                                    <label for="id_quantity">Quantity:</label>
+                                    <input type="number" id="id_quantity" name="quantity" min="1" value="1" required>
                                     <button type="submit" class="btn view-info m-4" aria-label="Add to basket">Add to Basket</button>
                                 </form>
                                 <form action="{% url 'add_to_favorites' product.id %}" method="post">

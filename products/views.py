@@ -54,16 +54,21 @@ def view_product(request, slug):
         basket_form = BasketForm(data=request.POST)
         if basket_form.is_valid():
             order = basket_form.save(commit=False)
-            order.user = request.user
-            order.product = product
-            order.amount = product.price
-            order.save()
-            messages.success(request, 'Product added to basket')
+            if order.quantity > 0:
+                order.user = request.user
+                order.product = product
+                order.amount = product.price
+                order.save()
+                messages.success(request, f'{product.title} added successfully to Your basket!')
+                return redirect('basket')
+            else:
+                messages.INFO(request, 'Minimum quantity is 1. Please select a valid quantity.')
             return redirect('basket')
         else:
-            messages.error(request, 'Error adding product to basket')
+            messages.error(request, 'There was an error adding the product to Your basket. Please try again.')
 
     basket_form = BasketForm()
+
     return render(
         request,
         'products/view_product.html',
@@ -116,7 +121,7 @@ def remove_item(request, basket_id):
 
     basket_item = get_object_or_404(Basket, id=basket_id, user=request.user)
     basket_item.delete()
-    messages.add_message(request, messages.SUCCESS, 'Item removed!')
+    messages.add_message(request, messages.ERROR, 'Item removed from your basket!')
 
     return HttpResponseRedirect(reverse('basket'))
 
@@ -190,6 +195,6 @@ def remove_favorite(request, favorite_id):
 
     favorite = get_object_or_404(Favorite, id=favorite_id, user=request.user)
     favorite.delete()
-    messages.add_message(request, messages.SUCCESS, 'Favorite removed!')
+    messages.add_message(request, messages.ERROR, 'Item removed from favorites!')
 
     return HttpResponseRedirect(reverse('favorites'))
