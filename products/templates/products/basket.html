@@ -51,8 +51,10 @@
                     </tr>
                 </tbody>
             </table>
-            <div><a href="{% url 'products' %}" class="btn btn-secondary mb-3" aria-label="Continue Shoping">Continue Shopping</a></div>
-            <div id="paypal-button-container" data-total={{total}}></div>
+            <div><a href="{% url 'products' %}" id="continue-shop" class="btn btn-secondary mb-3" aria-label="Continue Shoping">Continue Shopping</a></div>
+            <div class=paypal-button-parent>
+                <div id="paypal-button-container" data-total={{total}}></div>
+            </div>
         </div>
     </div>
 </div>
@@ -83,6 +85,14 @@
 
 <script>
     paypal.Buttons({
+        style: {
+            layout: 'vertical',
+            color:  'gold',
+            shape:  'rect',
+            label:  'paypal',
+            borderRadius: 10,
+            height: 40,
+        },
         createOrder: function(data, actions) {
             return actions.order.create({
                 purchase_units: [{
