@@ -129,7 +129,9 @@
       <!--User's status-->
     <div class="position-relative">
       <div class="position-absolute top-20 end-0 me-1 pe-3 mt-1">
-        {% if user.is_authenticated %}
+        {% if user.is_authenticated and user.is_superuser %}
+        <p>Hi <strong>{{request.user}}!</strong> <br> To access Admin Panel click <a href="https://charity-shop-pp4-2870c2ac8971.herokuapp.com/admin/">here</a></p>
+        {% elif user.is_authenticated %}
         <p>Hi <strong>{{request.user}}!</strong></p>
         {%  else %}
         <p>You are not logged in</p>
