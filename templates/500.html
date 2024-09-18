@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<div class="container-fluid home-div mt-5">
+    <div class="row home-row text-center">
+        <div class="col-lg-6 col-md-12">
+            <h1>500 - Server Error</h1>
+            <p>Oops! Something went wrong on our end.</p>
+            <a href="{% url 'home' %}">Return to Home</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
