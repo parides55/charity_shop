@@ -1,46 +1,47 @@
-[**Charity Treasures**](https://charity-shop-pp4-2870c2ac8971.herokuapp.com/)
+# [**Charity Treasures**](https://charity-shop-pp4-2870c2ac8971.herokuapp.com/)
 
 ![Home page](https://github.com/parides55/charity_shop/blob/main/Readme_docs/screenshots/desktop_home_signed_in.png)
 
 <details>
 <summary>Table of Contents</summary>
 
-- [Introduction](#introduction)
-- [User stories](#user-stories)
-- [UX](#ux)
-  - [Typography](#typography)
-  - [Wireframes](#wireframes)
-- [Accessibility](#accessibility)
-- [Database Design](#database-design)
-- [Features](#features)
-  - [Navigation Bar](#navigation-bar)
-  - [Footer](#footer)
-  - [Home Page](#home-page)
-  - [Our Story](#our-story)
-  - [Our products](#our-products)
-    - [View Product](#view-product)
-  - [Our events](#our-events)
-    - [View event](#view-event)
-  - [Contact Us](#contact-us)
-  - [Favorites](#favorites)
-  - [Basket](#basket)
-- [Technologies used](#technologies-used)
-- [Testing](#testing)
-  - [Browser Compatibility](#browser-compatibility)
-  - [Responsiveness](#responsiveness)
-  - [Performance Testing](#performance-testing)
-  - [Accessibility Testing](#accessibility-testing)
-  - [User Story Testing](#user-story-testing)
-  - [Code Validation](#code-validation)
-    - [HTML Validation](#html-validation)
-    - [CSS validation](#css-validation)
-    - [JavaScript Validation](#javascript-validation)
-    - [Python Validation](#python-validation)
-- [Deployment](#deployment)
-- [Credits](#credits)
-  - [Content](#content)
-  - [Media](#media)
-  - [Acknowledgements](#acknowledgements)
+- [**Charity Treasures**](#charity-treasures)
+  - [Introduction](#introduction)
+  - [User stories](#user-stories)
+  - [UX](#ux)
+    - [Typography](#typography)
+    - [Wireframes](#wireframes)
+  - [Accessibility](#accessibility)
+  - [Database Design](#database-design)
+  - [Features](#features)
+    - [Navigation Bar](#navigation-bar)
+    - [Footer](#footer)
+    - [Home Page](#home-page)
+    - [Our Story](#our-story)
+    - [Our products](#our-products)
+      - [View Product](#view-product)
+    - [Our events](#our-events)
+      - [View event](#view-event)
+    - [Contact Us](#contact-us)
+    - [Favorites](#favorites)
+    - [Basket](#basket)
+  - [Technologies used](#technologies-used)
+  - [Testing](#testing)
+    - [Browser Compatibility](#browser-compatibility)
+    - [Responsiveness](#responsiveness)
+    - [Performance Testing](#performance-testing)
+    - [Accessibility Testing](#accessibility-testing)
+    - [User Story Testing](#user-story-testing)
+    - [Code Validation](#code-validation)
+      - [HTML Validation](#html-validation)
+      - [CSS validation](#css-validation)
+      - [JavaScript Validation](#javascript-validation)
+      - [Python Validation](#python-validation)
+  - [Deployment](#deployment)
+  - [Credits](#credits)
+    - [Content](#content)
+    - [Media](#media)
+    - [Acknowledgements](#acknowledgements)
 
 </details>
 
@@ -54,7 +55,7 @@ The project was built keeping the Agile management principles in mind, and I uti
 
 I used GitHub issues for the product backlog containing the user stories and the labels feature in GitHub Issues for prioritizing features based on the MoSCoW method, and categorizing the user stories.
 
-CRUD funtionality
+CRUD functionality
 
 - Users can read all approved reviews, create, update and delete their own reviews.
 - Users can create, read, update and delete their basket and their favorites list.
@@ -302,7 +303,6 @@ Performed using Google Lighthouse in Google Chrome
 - Desktop
 
 <details>
-
 <summary>Home</summary>
 
 ![Home](https://github.com/parides55/charity_shop/blob/main/Readme_docs/LightHouse/desktop_home_LH.png)
@@ -310,7 +310,6 @@ Performed using Google Lighthouse in Google Chrome
 </details>
 
 <details>
-
 <summary>Our story</summary>
 
 ![Our Story](https://github.com/parides55/charity_shop/blob/main/Readme_docs/LightHouse/desktop_our_story_LH.png)
@@ -318,7 +317,6 @@ Performed using Google Lighthouse in Google Chrome
 </details>
 
 <details>
-
 <summary>Our events</summary>
 
 ![Our events](https://github.com/parides55/charity_shop/blob/main/Readme_docs/LightHouse/desktop_event_LH.png)
@@ -326,7 +324,6 @@ Performed using Google Lighthouse in Google Chrome
 </details>
 
 <details>
-
 <summary>View events</summary>
 
 ![View event](https://github.com/parides55/charity_shop/blob/main/Readme_docs/LightHouse/desktop_view_event_LH.png)
@@ -334,7 +331,6 @@ Performed using Google Lighthouse in Google Chrome
 </details>
 
 <details>
-
 <summary>Our products</summary>
 
 ![Our products](https://github.com/parides55/charity_shop/blob/84f15e1c24c02635324bd81b3c71ef092af8d9cf/Readme_docs/LightHouse/desktop_our_products_LH.png)
@@ -342,7 +338,6 @@ Performed using Google Lighthouse in Google Chrome
 </details>
 
 <details>
-
 <summary>View product</summary>
 
 ![View product](https://github.com/parides55/charity_shop/blob/main/Readme_docs/LightHouse/desktop_view_product_LH.png)
@@ -350,7 +345,6 @@ Performed using Google Lighthouse in Google Chrome
 </details>
 
 <details>
-
 <summary>Favorites</summary>
 
 ![Favorites](https://github.com/parides55/charity_shop/blob/main/Readme_docs/LightHouse/desktop_favoritest_LH.png)
@@ -358,7 +352,6 @@ Performed using Google Lighthouse in Google Chrome
 </details>
 
 <details>
-
 <summary>Basket</summary>
 
 ![Basket](https://github.com/parides55/charity_shop/blob/main/Readme_docs/LightHouse/desktop_basket_LH.png)
@@ -366,7 +359,6 @@ Performed using Google Lighthouse in Google Chrome
 </details>
 
 <details>
-
 <summary>Contact us</summary>
 
 ![Contact us](https://github.com/parides55/charity_shop/blob/main/Readme_docs/LightHouse/desktop_contact_us_LH.png)
@@ -376,7 +368,6 @@ Performed using Google Lighthouse in Google Chrome
 - Mobile
 
 <details>
-
 <summary>Home</summary>
 
 ![Home](https://github.com/parides55/charity_shop/blob/main/Readme_docs/LightHouse/mobile_home_LH.png)
@@ -384,7 +375,6 @@ Performed using Google Lighthouse in Google Chrome
 </details>
 
 <details>
-
 <summary>Our story</summary>
 
 ![Our Story](https://github.com/parides55/charity_shop/blob/main/Readme_docs/LightHouse/mobile_our_story_LH.png)
@@ -392,7 +382,6 @@ Performed using Google Lighthouse in Google Chrome
 </details>
 
 <details>
-
 <summary>Our events</summary>
 
 ![Our events](https://github.com/parides55/charity_shop/blob/main/Readme_docs/LightHouse/mobile_event_LH.png)
@@ -400,7 +389,6 @@ Performed using Google Lighthouse in Google Chrome
 </details>
 
 <details>
-
 <summary>View events</summary>
 
 ![View event](Readme_docs\LightHouse\mobile_view_event_LH.png)
@@ -408,7 +396,6 @@ Performed using Google Lighthouse in Google Chrome
 </details>
 
 <details>
-
 <summary>Our products</summary>
 
 ![Our products](https://github.com/parides55/charity_shop/blob/main/Readme_docs/LightHouse/mobile_our_products_LH.png)
@@ -416,7 +403,6 @@ Performed using Google Lighthouse in Google Chrome
 </details>
 
 <details>
-
 <summary>View product</summary>
 
 ![View product](https://github.com/parides55/charity_shop/blob/main/Readme_docs/LightHouse/mobile_our_products_LH.png)
@@ -424,7 +410,6 @@ Performed using Google Lighthouse in Google Chrome
 </details>
 
 <details>
-
 <summary>Favorites</summary>
 
 ![Favorites](https://github.com/parides55/charity_shop/blob/3f3255dd07827fbe314a6f4aa67f22a136fe8d85/Readme_docs/LightHouse/mobile_favorites_LH.png)
@@ -432,7 +417,6 @@ Performed using Google Lighthouse in Google Chrome
 </details>
 
 <details>
-
 <summary>Basket</summary>
 
 ![Basket](https://github.com/parides55/charity_shop/blob/3f3255dd07827fbe314a6f4aa67f22a136fe8d85/Readme_docs/LightHouse/mobile_basket_LH.png)
@@ -440,7 +424,6 @@ Performed using Google Lighthouse in Google Chrome
 </details>
 
 <details>
-
 <summary>Contact us</summary>
 
 ![Contact us](https://github.com/parides55/charity_shop/blob/3f3255dd07827fbe314a6f4aa67f22a136fe8d85/Readme_docs/LightHouse/mobile_contact_us_LH.png)
@@ -645,12 +628,10 @@ Result: Pass ✅
             alt="Valid CSS!" />
     </a>
 </p>
-     
 
 #### JavaScript Validation
 
 <details>
-
 <summary>JSHint validation screenshot - basket.js</summary>
 
 ![basket.js](https://github.com/parides55/charity_shop/blob/main/Readme_docs/validations/basket_js.png))
@@ -832,11 +813,11 @@ To deploy to Heroku, follow these steps:
 
 ## Credits
 
-The biggest credits need to go to my wife Maria, who actually took all of the photos of the products and create the description of all of them and actively supported me throughout this project. Also, she wrote the content of the OUR STORY page. 
+The biggest credits need to go to my wife Maria, who actually took all of the photos of the products and create the description of all of them and actively supported me throughout this project. Also, she wrote the content of the OUR STORY page.
 
 ### Content
 
-- [ Code-Institute-Org/gitpod-full-p3](https://github.com/Code-Institute-Org/gitpod-full-p3) template was used to create this repo.
+- [Code-Institute-Org/gitpod-full-p3](https://github.com/Code-Institute-Org/gitpod-full-p3) template was used to create this repo.
 - Events were taken from Google search
 - A lot of reference was taken from the [Developing with Django](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSD101_WTS+2/courseware/31f4d0db719b4ae38601295fa2151b5c/376093d8bf5a4b2abd2e47bdf47b82bf/) code of [Code of Institute](https://codeinstitute.net/global/) project to performed CRUD functionality and establish the models.
 
