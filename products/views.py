@@ -197,6 +197,7 @@ def add_to_favorites(request, product_id):
                 f'{product.title} is already in your favorites.')
 
         return redirect('products')
+
     except IntegrityError:
         messages.error(request, 'Database error. Please try again.')
         return redirect('products')
