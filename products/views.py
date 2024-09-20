@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib import messages
 from django.views import generic
+from django.conf import settings
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.db import IntegrityError
@@ -88,7 +89,7 @@ def view_product(request, slug):
             )
     except Exception as e:
         messages.error(request, f'The following error occurred:\n{str(e)}.')
-        return render(request, 'errors/500.html', status=500)
+        return render(request, '500.html', status=500)
 
 
 def home(request):
@@ -123,11 +124,17 @@ def basket(request):
         items = Basket.objects.filter(user=request.user)
         total = sum(item.amount*item.quantity for item in items)
 
-        return render(request, 'products/basket.html', {
-            'items': items, 'total': total})
+        context = {
+        'items': items,
+        'total': total,
+        'paypal_client_id': settings.PAYPAL_CLIENT_ID,
+    }
+
+        return render(request, 'products/basket.html', context)
+
     except Exception as e:
         messages.error(request, f'The following error occurred:\n{str(e)}.')
-        return render(request, 'errors/500.html', status=500)
+        return render(request, '500.html', status=500)
 
 
 @login_required
@@ -166,7 +173,7 @@ def after_payment(request):
         )
     except Exception as e:
         messages.error(request, f'Payment processing failed because of the following error:\n{str(e)}')
-        return render(request, 'errors/500.html', status=500)
+        return render(request, '500.html', status=500)
 
 
 @login_required
@@ -219,7 +226,7 @@ def favorites(request):
             )
     except Exception as e:
         messages.error(request, f'The following unexpected error occurred:\n{str(e)}')
-        return render(request, 'errors/500.html', status=500)
+        return render(request, '500.html', status=500)
 
 
 @login_required
