@@ -53,7 +53,8 @@
             </table>
             <div><a href="{% url 'products' %}" id="continue-shop" class="btn btn-secondary mb-3" aria-label="Continue Shoping">Continue Shopping</a></div>
             <div class=paypal-button-parent>
-                <div id="paypal-button-container" data-total={{total}}></div>
+                <div id="paypal-button-container" data-total="{{ total }}" data-paypal-client-id="{{ paypal_client_id }}">
+            </div>
             </div>
         </div>
     </div>
@@ -79,47 +80,6 @@
     </div>
 </div>
 {% endfor %}
-
-<!-- Paypal script -->
-<script src="https://www.paypal.com/sdk/js?client-id=ARE4mKiDxcerMilheydmoZkgZahSKEgexC7SIoCLAT9N7RDfr58ucyT2N4GiSHqBoHrZ8RUFCbKb0OXo&currency=EUR"></script>
-
-<script>
-    paypal.Buttons({
-        style: {
-            layout: 'vertical',
-            color:  'gold',
-            shape:  'rect',
-            label:  'paypal',
-            borderRadius: 10,
-            height: 40,
-        },
-        createOrder: function(data, actions) {
-            return actions.order.create({
-                purchase_units: [{
-                    amount: {
-                        value: '{{ total }}' // The total amount of the basket
-                    }
-                }]
-            });
-        },
-        onApprove: function(data, actions) {
-            return actions.order.capture().then(function(details) {
-                // Redirect the user after successful payment
-                window.location.href = "{% url 'after_payment' %}";
-            });
-        },
-        onCancel: function (data) {
-            // Handle payment cancellation
-            alert('Payment was cancelled!');
-        },
-        onError: function (err) {
-            // Handle errors during the payment process
-            alert('An error occurred during the transaction.');
-        }
-    }).render('#paypal-button-container');
-</script>
-
-
 
 {% endblock content %}
 
