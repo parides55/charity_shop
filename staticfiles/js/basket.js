@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert('Payment was cancelled!');
             },
             onError: function (err) {
-                alert('An error occurred during the transaction.');
+                alert('An error occurred during the transaction. Use different payment method or try again later.');
             }
         }).render('#paypal-button-container');
     };
