@@ -87,7 +87,7 @@ def view_product(request, slug):
                 'basket_form': basket_form, },
             )
     except Exception as e:
-        messages.error(request, f'The following error occurred:\n{e}.')
+        messages.error(request, f'The following error occurred:\n{str(e)}.')
         return render(request, 'errors/500.html', status=500)
 
 
@@ -126,7 +126,7 @@ def basket(request):
         return render(request, 'products/basket.html', {
             'items': items, 'total': total})
     except Exception as e:
-        messages.error(request, f'The following error occurred:\n{e}.')
+        messages.error(request, f'The following error occurred:\n{str(e)}.')
         return render(request, 'errors/500.html', status=500)
 
 
@@ -143,7 +143,7 @@ def remove_item(request, basket_id):
 
         return HttpResponseRedirect(reverse('basket'))
     except Exception as e:
-        messages.error(request, f'Failed to remove item because of the following error:\n{e}')
+        messages.error(request, f'Failed to remove item because of the following error:\n{str(e)}')
         return redirect('basket')
 
 
@@ -165,7 +165,7 @@ def after_payment(request):
             'products/after_payment.html',
         )
     except Exception as e:
-        messages.error(request, f'Payment processing failed because of the following error:\n{e}')
+        messages.error(request, f'Payment processing failed because of the following error:\n{str(e)}')
         return render(request, 'errors/500.html', status=500)
 
 
@@ -193,7 +193,7 @@ def add_to_favorites(request, product_id):
         messages.error(request, 'Database error. Please try again.')
         return redirect('products')
     except Exception as e:
-        messages.error(request, f'The following unexpected error occurred:\n{e}')
+        messages.error(request, f'The following unexpected error occurred:\n{str(e)}')
         return redirect('products')
 
 @login_required
@@ -218,7 +218,7 @@ def favorites(request):
             {'favorites': favorites, },
             )
     except Exception as e:
-        messages.error(request, f'The following unexpected error occurred:\n{e}')
+        messages.error(request, f'The following unexpected error occurred:\n{str(e)}')
         return render(request, 'errors/500.html', status=500)
 
 
@@ -235,5 +235,5 @@ def remove_favorite(request, favorite_id):
 
         return HttpResponseRedirect(reverse('favorites'))
     except Exception as e:
-        messages.error(request, f'Failed to remove item because of the following error:\n{e}')
+        messages.error(request, f'Failed to remove item because of the following error:\n{str(e)}')
         return redirect('favorites')
