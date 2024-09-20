@@ -28,11 +28,11 @@ def our_story(request):
             )
 
     except OurStory.DoesNotExist:
-        messages.ERROR(request, 'Our Story content is not available at the moment.')
+        messages.error(request, 'Our Story content is not available at the moment.')
         return redirect('home')
 
     except Exception as e:
-        messages.ERROR(request, f"The following error occurred: {str(e)}")
+        messages.error(request, f"The following error occurred: {str(e)}")
         return redirect('home')
 
 
@@ -55,12 +55,12 @@ def contact_us(request):
             if contact_us_form.is_valid():
                 contact_us_form.save()
                 messages.add_message(
-                    request, messages.SUCCESS,
+                    request, messages.success,
                     "Your message has been sent successfully. We try to get back to you with 2 working days. Thank you!"
                 )
             else:
                 messages.add_message(
-                    request, messages.ERROR,
+                    request, messages.error,
                     "There was an error sending your message. Please try again."
                 )
         contact_us_form = ContactUsForm()

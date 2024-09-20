@@ -82,13 +82,13 @@ def write_review(request, slug):
                 review.author = request.user
                 review.post = event
                 review.save()
-                messages.SUCCESS(
+                messages.success(
                     request,
                     'Review submitted successfully and awaiting approval.'
                 )
                 return redirect('event_info', slug=slug)
             else:
-                messages.ERROR(
+                messages.error(
                     request,
                     'Review not submitted. Please try again.'
                 )
@@ -135,13 +135,13 @@ def edit_review(request, slug, review_id):
                 review.post = event
                 review.approved = False
                 review.save()
-                messages.SUCCESS(
+                messages.success(
                     request,
                     'Successful edit of review and after approval will be displayed.'
                     )
                 return redirect('event_info', slug=slug)
             else:
-                messages.ERROR(
+                messages.error(
                     request,
                     'Something went wrong. Please try to edit again.'
                 )
@@ -184,9 +184,9 @@ def delete_review(request, slug, review_id):
 
         if review.author == request.user:
             review.delete()
-            messages.SUCCESS(request, 'Review deleted!')
+            messages.success(request, 'Review deleted!')
         else:
-            messages.ERROR(
+            messages.error(
                 request, 'You can only delete your own reviews!')
 
         return HttpResponseRedirect(reverse('event_info', args=[slug]))

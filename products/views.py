@@ -199,6 +199,7 @@ def add_to_favorites(request, product_id):
     except IntegrityError:
         messages.error(request, 'Database error. Please try again.')
         return redirect('products')
+
     except Exception as e:
         messages.error(request, f'The following unexpected error occurred:\n{str(e)}')
         return redirect('products')
@@ -224,6 +225,7 @@ def favorites(request):
             'products/favorites.html',
             {'favorites': favorites, },
             )
+    
     except Exception as e:
         messages.error(request, f'The following unexpected error occurred:\n{str(e)}')
         return render(request, '500.html', status=500)
@@ -238,9 +240,9 @@ def remove_favorite(request, favorite_id):
     try:
         favorite = get_object_or_404(Favorite, id=favorite_id, user=request.user)
         favorite.delete()
-        messages.add_message(request, messages.ERROR, 'Item removed from favorites!')
-
+        messages.error(request, 'Item removed from favorites!')
         return HttpResponseRedirect(reverse('favorites'))
+
     except Exception as e:
         messages.error(request, f'Failed to remove item because of the following error:\n{str(e)}')
         return redirect('favorites')
