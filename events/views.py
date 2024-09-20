@@ -46,7 +46,7 @@ def event_info(request, slug):
                     {'event': event, 'reviews': reviews})
 
     except Event.DoesNotExist:
-        messages.error(request, 'Event not found.')
+        messages.info(request, 'Event not found.')
         return redirect('events')
 
     except Exception as e:
@@ -96,7 +96,7 @@ def write_review(request, slug):
         return HttpResponseRedirect(reverse('event_info', args=[slug]))
 
     except Event.DoesNotExist:
-        messages.error(request, 'Event not found.')
+        messages.info(request, 'Event not found.')
         return redirect('events')
 
     except Exception as e:
@@ -149,11 +149,11 @@ def edit_review(request, slug, review_id):
         return HttpResponseRedirect(reverse('event_info', args=[slug]))
 
     except Event.DoesNotExist:
-        messages.error(request, 'Event not found.')
+        messages.info(request, 'Event not found.')
         return redirect('events')
 
     except Review.DoesNotExist:
-        messages.error(request, 'Review not found.')
+        messages.info(request, 'Review not found.')
         return redirect('event_info', slug=slug)
 
     except Exception as e:
@@ -184,9 +184,9 @@ def delete_review(request, slug, review_id):
 
         if review.author == request.user:
             review.delete()
-            messages.success(request, 'Review deleted!')
+            messages.error(request, 'Review deleted!')
         else:
-            messages.error(
+            messages.info(
                 request, 'You can only delete your own reviews!')
 
         return HttpResponseRedirect(reverse('event_info', args=[slug]))
