@@ -166,6 +166,7 @@ def after_payment(request):
     try:
         basket_items = Basket.objects.filter(user=request.user)
         basket_items.delete()
+        messages.success(request, 'Payment processed successfully. Your basket has been cleared.')
 
         return render(
             request,
