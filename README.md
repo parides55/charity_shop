@@ -249,7 +249,7 @@ Because this website is not registered yet with any authorities as an approved c
 <details>
 <summary>Basket</summary>
 
-![Basket](https://github.com/parides55/charity_shop/blob/main/Readme_docs/screenshots/desktop_basket.png)
+![Basket](https://github.com/parides55/charity_shop/blob/4066cb955f11b264bd94d84a938a5066e0675278/Readme_docs/screenshots/desktop_basket.png)
 ![After Payment](https://github.com/parides55/charity_shop/blob/main/Readme_docs/screenshots/desktop_after_payment.png)
 
 </details>
