@@ -144,7 +144,7 @@ The footer is shown on all pages and it's purpose is to provide a quick and easy
 This is the first page that a user or a visitor will see. It contains in the middle the logo of the organization with and inviting and informative message to the user/visitor. If the user is not authenticated the message includes a sing up link to invite the visitor to register. If it is a returning user the sign up link is not shown and the user is greeted on the top right corner with its username. This feature is displayed on all pages.
 
 <details>
-<summary>Home page - signed out</summary>
+<summary>Home page - signed out and signed in</summary>
 
 ![Home page signed out](https://github.com/parides55/charity_shop/blob/main/Readme_docs/screenshots/desktop_home.png)
 ![Home page signed in](https://github.com/parides55/charity_shop/blob/main/Readme_docs/screenshots/desktop_home_signed_in.png)
@@ -271,7 +271,7 @@ Because this website is not registered yet with any authorities as an approved c
 - [ColorSpace](https://mycolor.space/?hex=%23CCE0C5&sub=1) to choose the color palettes.
 - [Design.com](https://www.design.com/) to design, generate and edit the logo.
 - [Animate.css](https://animate.style/#utilities) to add animation to website's content.
-- [Stripe](https://stripe.com/gb) as an external provider to handle payments.
+- [Paypal](https://developer.paypal.com/home/) as an external provider to handle payments.
 - [TinyPNG](https://tinypng.com/) to optimize images for the site.
 - [Google Chrome](https://www.google.com/intl/en_ie/chrome/), [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/) and [Microsoft Edge](https://www.microsoft.com/en-us/edge) for testing on Windows 11.
 - [Safari](https://www.apple.com/safari/) on iOS and iPadOS 17 and iPhoneOS 15.
@@ -398,7 +398,7 @@ Performed using Google Lighthouse in Google Chrome
 <details>
 <summary>View events</summary>
 
-![View event](Readme_docs\LightHouse\mobile_view_event_LH.png)
+![View event](https://github.com/parides55/charity_shop/blob/3f3255dd07827fbe314a6f4aa67f22a136fe8d85/Readme_docs/LightHouse/mobile_view_event_LH.png)
 
 </details>
 
