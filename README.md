@@ -118,13 +118,13 @@ This website utilizes numerous features from an e-commerce website and a blog. A
 
 ### Navigation Bar
 
-The navigation bar is shown in all pages and it provides an easy way to navigate throughout the whole website. On the left side the logo of the organization is shown and it is also a link to the home page. A link to the home page is the organization's name on the top which is displayed continuously in all displays. On the right side the user icons are found which they are only shown if the user is authenticated, otherwise just a login icon is shown. Through the user icons, the users can navigate to their favorite page, where their favorite products are stored, to the their basket so they can proceed to check out or to remove the selected products and also to log out.
+The navigation bar is shown in all pages and it provides an easy way to navigate throughout the whole website. On the left side the logo of the organization is shown and it is also a link to the home page. A link to the home page is the organization's name on the top which is displayed continuously in all displays. On the right side the user icons are found which they are only shown if the user is authenticated, otherwise just a login icon is shown. Also, if the user is a superuser an additional selection appears to allow the superuser to access the Admin Panel. Through the user icons, the users can navigate to their favorite page, where their favorite products are stored, to the their basket so they can proceed to check out or to remove the selected products and also to log out.
 
 <details>
 <summary>Navigation Bar</summary>
 
 ![Navigation Bar](https://github.com/parides55/charity_shop/blob/main/Readme_docs/screenshots/desktop_navigation_bar.png)
-![User icons](https://github.com/parides55/charity_shop/blob/main/Readme_docs/screenshots/desktop_user_icons.png)
+![User icons](https://github.com/parides55/charity_shop/blob/main/Readme_docs/screenshots/desktop_user_icons.png)![User icons for superuser](https://github.com/parides55/charity_shop/blob/main/Readme_docs/screenshots/desktop_user_icons_super.png)
 
 </details>
 
@@ -231,13 +231,20 @@ In this page the user can view their selected products. The products are display
 
 ### Basket
 
-This page displays all the items that the user intents to buy. The items are presented in a table format where the Product's title, the quantity, the price per item and the total price for the item is shown. At the bottom of the table the total amount of the order is shown. Also, next to each item there's a 'Remove' button so the user can remove any item. When clicked, a clicked a confirmation message is displayed on the top of the page indicating successful or not removal. At the bottom of the table there are 2 buttons. The 'Continue Shopping' button will redirect the user to the products page and the 'Proceed to Checkout' button will take the user to the payment link provided by Stripe. After successful payment the Stripe website will take the user back to the 'Charity Treasures' website and will show a 'Thank for your payment' message and display 2 buttons. One to search for more products and one to view the events. Lastly, after successful payment the user's items are deleted from their basket.
+This page displays all the items that the user intents to buy. The items are presented in a table format where the Product's title, the quantity, the price per item and the total price for the item is shown. At the bottom of the table the total amount of the order is shown. Also, next to each item there's a '-' button to allow the user to remove any item. When clicked, a confirmation message is displayed on the top of the page indicating successful or not removal. At the bottom of the table the 'Continue Shopping' button will redirect the user to the products page and the 'Proceed to Checkout' button will take the user to the payment link provided by Stripe. After successful payment, the user is directed to the 'Thank for your payment' page and 2 buttons are displayed. One to search for more products and one to view the events. Lastly, after successful payment the user's items are deleted from their basket.
 
-Because this website is not registered yet with any authorities as an approved charity organization, the transaction happening in the Stripe payment link is in the test mode. Thus only one product is shown for purchase and in order for the purchase to be successful the following credit card details have to be inserted:
+Because this website is not registered yet with any authorities as an approved charity organization, to handle payments, I'm use a sandbox account from Paypal, which takes the total amount and depending on the user's choice it simulates a transaction. To use the Paypal Button, the user has to be registered with paypal. TO use the "Debit or Credit Card" option the following cards,from the [Paypal's Card Testing](https://developer.paypal.com/api/rest/sandbox/card-testing/) webpage have been used and tested successfully:
 
-Card Number : 4242 4242 4242 4242
-Expiry date: Any future date
-CVV number: Any 3 digit number
+<details>
+<summary> Test Credit Cards</summary>
+
+- Use a test card number with a future expiration date and a 3-digit CVV.
+
+- Visa: 4005519200000004
+- Mastercard: 2223000048400011
+- Maestro: 6304000000000000
+
+</details>
 
 <details>
 <summary>Basket</summary>
