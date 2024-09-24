@@ -38,6 +38,7 @@
       - [JavaScript Validation](#javascript-validation)
       - [Python Validation](#python-validation)
   - [Deployment](#deployment)
+  - [Bugs](#bugs)
   - [Credits](#credits)
     - [Content](#content)
     - [Media](#media)
@@ -818,6 +819,11 @@ To deploy to Heroku, follow these steps:
 - Optionally choose the main branch under 'Automatic Deploys' and select 'Enable Automatic Deploys' if you wish your deployed site to be automatically redeployed every time you push changes to GitHub.
 - Find the 'Manual Deploy' section, choose 'main' as the branch to deploy and select 'Deploy Branch'.
 - Your site will shortly be deployed and you will be given a link to the deployed site when the process is complete.
+
+
+## Bugs
+
+- At the last minute I found an issue submitting the contact us form. After submition the following error appears "The following error occurred: int() argument must be a string, a bytes-like object or a real number, not 'function'". It will require further investigation.
 
 ## Credits
 
