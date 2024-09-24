@@ -823,7 +823,7 @@ To deploy to Heroku, follow these steps:
 
 ## Bugs
 
-- At the last minute I found an issue submitting the contact us form. After submition the following error appears "The following error occurred: int() argument must be a string, a bytes-like object or a real number, not 'function'". It will require further investigation.
+- At the last minute I found an issue submitting the contact us form. After submition the following error appears "The following error occurred: int() argument must be a string, a bytes-like object or a real number, not 'function'". This was due to the messages function was not written correctly. 
 
 ## Credits
 
