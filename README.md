@@ -604,18 +604,19 @@ Result: Pass ✅
 
 | Page                | URL                        | Results                        |
 |---------------------|----------------------------|--------------------------------|
-| basket.html         | basket/                    | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-shop-pp4-2870c2ac8971.herokuapp.com%2Fbasket%2F#l62c22)      |
-| favorites.html      | favorites/                 | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-shop-pp4-2870c2ac8971.herokuapp.com%2Ffavorites%2F#l62c22)      |
-| index.html          | ''                         | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-shop-pp4-2870c2ac8971.herokuapp.com%2F#l62c22)      |
-| products.html       | products/                  | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-shop-pp4-2870c2ac8971.herokuapp.com%2Fproducts%2F#l62c22)      |
-| view_product.html   | slug:slug/view_product/    | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-shop-pp4-2870c2ac8971.herokuapp.com%2Fpiano-toy-red%2Fview_product%2F#l62c22)      |
-| contact_us.html     | our-story/contact-us/      | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-shop-pp4-2870c2ac8971.herokuapp.com%2Four-story%2Fcontact-us%2F#l189c109)      |
-| our_story.html      | our-story/                 | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-shop-pp4-2870c2ac8971.herokuapp.com%2Four-story%2F)      |
-| privacy.html        | /our-story/privacy/        | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-shop-pp4-2870c2ac8971.herokuapp.com%2Four-story%2Fprivacy%2F#l189c109)      |
-| events.html         | events/                    | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-shop-pp4-2870c2ac8971.herokuapp.com%2Fevents%2F#l62c22)      |
+| basket.html         | basket/                    | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-treasures-bde65634f398.herokuapp.com%2Fbasket%2F#l62c22)      |
+| favorites.html      | favorites/                 | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-treasures-bde65634f398.herokuapp.com%2Ffavorites%2F#l62c22)      |
+| index.html          | ''                         | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-treasures-bde65634f398.herokuapp.com%2F#l62c22)      |
+| products.html       | products/                  | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-treasures-bde65634f398.herokuapp.com%2Fproducts%2F#l62c22)      |
+| view_product.html   | slug:slug/view_product/    | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-treasures-bde65634f398.herokuapp.com%2Fpiano-toy-red%2Fview_product%2F#l62c22)      |
+| contact_us.html     | our-story/contact-us/      | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-treasures-bde65634f398.herokuapp.com%2Four-story%2Fcontact-us%2F#l62c22)      |
+| our_story.html      | our-story/                 | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-treasures-bde65634f398.herokuapp.com%2Four-story%2F#l62c22)      |
+| privacy.html        | /our-story/privacy/        | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-treasures-bde65634f398.herokuapp.com%2Four-story%2Fprivacy%2F#l62c22)      |
+| events.html         | events/                    | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-treasures-bde65634f398.herokuapp.com%2Fevents%2F#l62c22)      |
 | event_info.html     | slug:slug/                 | [No errors or warnings]()      |
-| logout.html         | accounts/logout/           | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-shop-pp4-2870c2ac8971.herokuapp.com%2Faccounts%2Flogout%2F#l62c22)      |
-| login.html          | accounts/login/            | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-shop-pp4-2870c2ac8971.herokuapp.com%2Faccounts%2Flogin%2F#l62c22)      |
+| logout.html         | accounts/logout/           | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-treasures-bde65634f398.herokuapp.com%2Faccounts%2Flogout%2F#l62c22)      |
+| login.html          | accounts/login/            | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-treasures-bde65634f398.herokuapp.com%2Faccounts%2Flogin%2F#l62c22)      |
+| signup.html          | accounts/signup/            | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-treasures-bde65634f398.herokuapp.com%2Faccounts%2Flogin%2F#l62c22)      |
 
 </details>
 
@@ -641,7 +642,7 @@ Result: Pass ✅
 <details>
 <summary>JSHint validation screenshot - basket.js</summary>
 
-![basket.js](https://github.com/parides55/charity_shop/blob/main/Readme_docs/validations/basket_js.png))
+![basket.js](https://github.com/parides55/charity_shop/blob/eb86f77a3e36c94e2a4942762f2b392cf4534488/Readme_docs/validations/basket_js.png)
 
 </details>
 
