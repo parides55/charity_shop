@@ -613,7 +613,7 @@ Result: Pass ✅
 | our_story.html      | our-story/                 | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-treasures-bde65634f398.herokuapp.com%2Four-story%2F#l62c22)      |
 | privacy.html        | /our-story/privacy/        | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-treasures-bde65634f398.herokuapp.com%2Four-story%2Fprivacy%2F#l62c22)      |
 | events.html         | events/                    | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-treasures-bde65634f398.herokuapp.com%2Fevents%2F#l62c22)      |
-| event_info.html     | slug:slug/                 | [No errors or warnings]()      |
+| event_info.html     | slug:slug/                 | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-treasures-bde65634f398.herokuapp.com%2Fevents%2Flondon-2-brighton-challenge-2024%2F)      |
 | logout.html         | accounts/logout/           | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-treasures-bde65634f398.herokuapp.com%2Faccounts%2Flogout%2F#l62c22)      |
 | login.html          | accounts/login/            | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-treasures-bde65634f398.herokuapp.com%2Faccounts%2Flogin%2F#l62c22)      |
 | signup.html          | accounts/signup/            | [No errors or warnings](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fcharity-treasures-bde65634f398.herokuapp.com%2Faccounts%2Flogin%2F#l62c22)      |
@@ -642,7 +642,7 @@ Result: Pass ✅
 <details>
 <summary>JSHint validation screenshot - basket.js</summary>
 
-![basket.js](https://github.com/parides55/charity_shop/blob/eb86f77a3e36c94e2a4942762f2b392cf4534488/Readme_docs/validations/basket_js.png)
+![basket.js](https://github.com/parides55/charity_shop/blob/29b0aec979637f4267de8f1dd5044621b255ff51/Readme_docs/validations/basket_js.png)
 
 </details>
 
