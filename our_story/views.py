@@ -58,6 +58,7 @@ def contact_us(request):
                     request, messages.success,
                     "Your message has been sent successfully. We try to get back to you with 2 working days. Thank you!"
                 )
+                return redirect('contact_us')
             else:
                 messages.add_message(
                     request, messages.error,
@@ -72,7 +73,7 @@ def contact_us(request):
 
     except Exception as e:
         messages.error(request, f"The following error occurred: {str(e)}")
-        return redirect('home')
+        return redirect('contact_us')
 
 
 def privacy(request):
