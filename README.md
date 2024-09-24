@@ -110,7 +110,7 @@ I, also, ensured that every element still met AAA level in the [Web Content Acce
 
 ## Database Design
 
-![Database Design](https://github.com/parides55/charity_shop/blob/main/Readme_docs/Charity_Shop_Database.drawio.png)
+![Database Design](https://github.com/parides55/charity_shop/blob/54fdcfe7d2cccc73aa31d7b6ee9915f8c100e3ff/Readme_docs/Charity_Shop_Database.drawio.png)
 
 ## Features
 
